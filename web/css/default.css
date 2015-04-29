@@ -1,0 +1,71 @@
+/* For testing */ 
+html {
+    background: #003344;
+    color: #FFFFFF;
+}
+
+.red {
+    background: #FF0000;
+}
+
+.talldiv {
+    height: 3000px;
+    width: 300px;
+    background: #aaaa00;
+    margin: auto;
+    text-align: center;
+}
+
+/* Navbar */
+#header{
+    background: pink;
+    height: 4rem;
+    display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	align-items: center;
+    padding: 10px;
+}
+
+#nav-button-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+#nav-button {
+    position: relative;
+    left: -50%;
+}
+
+#nav-button div {
+    float: left;
+    background: #ee3191;
+    padding: .7rem;
+}
+
+#logo {
+    float: left;
+    font-size: 3rem;
+}
+
+#userinfo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: .7rem;
+}
+
+#userinfo div {
+    float: left;
+    padding: 0 .5rem 0 .5rem;
+    font-size: 1rem;
+}
+
+#username {
+    border-right: 2px solid #000000;
+}
+
