@@ -1,0 +1,75 @@
+#userstatus
+{
+	float:left;
+	width:30%;
+}
+
+#usertable
+{
+	text-align:center;
+	margin:auto;
+}
+
+#usertable td
+{
+	padding:20px;
+}
+
+#avatarimage
+{
+	width:100px;
+	height:100px;
+}
+
+#name
+{
+	font-size:3rem;
+	font-weight:bold;
+}
+
+#userquote
+{
+	border-radius:20px;
+	border-style:dotted;
+	border-width:thin;
+	padding:10px;
+}
+
+#stats
+{
+	margin:auto;
+}
+
+#stats td
+{
+	border-style:solid;
+	border-width:thin;
+	padding:5px;
+}
+
+.nonheaderrow th
+{
+	text-align:left;
+	padding-right:5px;
+}
+
+#uservibes
+{
+	margin-left:30%;
+	text-align:center;
+	padding:20px;
+}
+
+#uservibes h1
+{
+	font-size:2rem;
+	font-weight:bold;
+}
+
+#vibecloud img
+{
+	max-width:75%;
+	max-height:75%;
+}
+
+

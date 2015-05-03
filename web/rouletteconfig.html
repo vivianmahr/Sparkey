@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="./css/default.css"></style>
+		<link rel="stylesheet" type="text/css" href="./css/rouletteconfig.css"></style>
         <link rel="stylesheet" type="text/css" href="./css/reset.css"></style>
     </head>
     <header>
@@ -39,7 +40,34 @@
         </div>
     </header>
     <body>
-       
+       <form id="rouletteform">
+			<span id="roulettetitle">Roulette</span>
+			<br/>
+				<span id="contentcheckboxes">
+				<input type="checkbox" name="content type" value="Text" id="textcheckbox">Text
+				<input type="checkbox" name="content type" value="Photo" id="photocheckbox">Photo
+				<input type="checkbox" name="content type" value="Video" id="videocheckbox">Video
+				</span>
+			<br/>
+			<br/>
+				<span style="text-align:left">Vibes</span>
+			<br/>
+				<textarea id="vibeinput" rows="5">What do you want to see?</textarea>
+			<br/>
+			<br/>
+				Size
+			<br/>
+				<select>
+					<option value="10">10</option>
+					<option value="20">20</option>
+					<option value="30">30</option>
+					<option value="40">40</option>
+					<option value="50">50</option>
+				</select>
+			<br/>
+			<br/>
+				<input type="submit" value="Go!" id="submitbutton">
+	   </form>
     </body>
     <footer>
     </footer>

@@ -1,24 +1,19 @@
-/* For testing */ 
-html {
-    background: #003344;
-    color: #FFFFFF;
+*
+{
+	font-family: 'Century Gothic', sans-serif !important;
 }
 
-.red {
-    background: #FF0000;
-}
-
-.talldiv {
-    height: 3000px;
-    width: 300px;
-    background: #aaaa00;
-    margin: auto;
-    text-align: center;
+html
+{
+    background: #FEF1B5;
+    color: #C5B9C7;
 }
 
 /* Navbar */
-#header{
-    background: pink;
+#header
+{
+	font-family: 'Century Gothic', sans-serif;
+    background: rgba(159, 112, 58, 0.5);
     height: 4rem;
     display: -ms-flexbox;
 	display: -webkit-flex;
@@ -30,42 +25,77 @@ html {
     padding: 10px;
 }
 
-#nav-button-wrapper {
+#nav-button-wrapper 
+{
     position: absolute;
     top: 0;
     left: 50%;
 }
 
-#nav-button {
+#nav-button 
+{
     position: relative;
     left: -50%;
 }
 
-#nav-button div {
+#nav-button div 
+{
     float: left;
-    background: #ee3191;
+    background: rgba(159, 112, 58, 0.5);
     padding: .7rem;
 }
 
-#logo {
-    float: left;
-    font-size: 3rem;
+#roulette 
+{
+	border-radius: 0px 0px 0px 15px;
 }
 
-#userinfo {
+#submit 
+{
+	border-radius: 0px 0px 15px 0px;
+}
+
+#logo 
+{
+    float: left;
+    font-size: 3rem;
+	
+}
+
+#userinfo 
+{
     position: absolute;
     right: 0;
     top: 0;
     padding: .7rem;
 }
 
-#userinfo div {
+#userinfo div 
+{
     float: left;
     padding: 0 .5rem 0 .5rem;
     font-size: 1rem;
 }
 
-#username {
+#username 
+{
+	color:#953246;
+	font-weight: bold;
     border-right: 2px solid #000000;
 }
 
+#logout
+{
+	color:#953246;
+	font-weight: bold;
+}
+
+.red
+{
+	color:#953246;
+}
+
+body
+{
+	color:#333041;
+}
