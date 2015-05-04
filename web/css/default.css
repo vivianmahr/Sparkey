@@ -59,7 +59,10 @@ html
 {
     float: left;
     font-size: 3rem;
-	
+	background-image:url("C:/Users/tams/Desktop/INF 134/Sparkey/web/images/Sparkey Logo Orange.png");
+	background-size:3rem;
+	background-repeat:no-repeat;
+	padding-left:3rem;
 }
 
 #userinfo 
