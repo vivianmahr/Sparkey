@@ -1,4 +1,4 @@
-#rouletteform
+#formwrapper
 {
 	background: rgba(199, 95, 102, 0.5);
 	border-style:dashed;
@@ -10,7 +10,7 @@
 	padding:2%;
 }
 
-#roulettetitle
+#formtitle
 {
 	display:block;
 	text-align:center;
@@ -18,9 +18,9 @@
 	font-size:2rem;
 }
 
-#vibeinput
+#textinput
 {
-	width:100%;
+	width:99%;
 }
 
 #submitbutton
