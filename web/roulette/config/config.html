@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="./css/default.css"></style>
-		<link rel="stylesheet" type="text/css" href="./css/form.css"></style>
-        <link rel="stylesheet" type="text/css" href="./css/reset.css"></style>
+        <link rel="stylesheet" type="text/css" href="../../css/default.css"></style>
+		<link rel="stylesheet" type="text/css" href="./css/config.css"></style>
+        <link rel="stylesheet" type="text/css" href="../../css/reset.css"></style>
     </head>
     <header>
         <div id="header">
@@ -12,15 +12,21 @@
             </div>
             <div id="nav-button-wrapper">
                 <div id="nav-button">
-                    <div id="roulette">
-                        Roulette
-                    </div>
-                    <div id="browse">
-                        Browse
-                    </div>
-                    <div id="submit">
-                        Submit
-                    </div>
+                    <a href="../config/config.html">
+                        <div id="roulette">
+                            Roulette
+                        </div>
+                    </a>
+                    <a href="../../browse/browse.html">
+                        <div id="browse">
+                            Browse
+                        </div>
+                    </a>
+                    <a href="../../submit/submit.html">
+                        <div id="submit">
+                            Submit
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="userinfo">
@@ -40,8 +46,8 @@
         </div>
     </header>
     <body>
-       <form id="formwrapper">
-			<span id="formtitle">Roulette</span>
+       <form id="rouletteform">
+			<span id="roulettetitle">Roulette</span>
 			<br/>
 				<span id="contentcheckboxes">
 				<input type="checkbox" name="content type" value="Text" id="textcheckbox">Text
@@ -52,7 +58,7 @@
 			<br/>
 				<span style="text-align:left">Vibes</span>
 			<br/>
-				<textarea id="textinput" rows="5">What do you want to see?</textarea>
+				<textarea id="vibeinput" rows="5">What do you want to see?</textarea>
 			<br/>
 			<br/>
 				Size

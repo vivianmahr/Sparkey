@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="./css/default.css">
+        <link rel="stylesheet" type="text/css" href="../css/default.css">
 		<link rel="stylesheet" type="text/css" href="./css/profile.css">
-        <link rel="stylesheet" type="text/css" href="./css/reset.css">
+        <link rel="stylesheet" type="text/css" href="../css/reset.css">
     </head>
     <header>
         <div id="header">
@@ -12,15 +12,21 @@
             </div>
             <div id="nav-button-wrapper">
                 <div id="nav-button">
-                    <div id="roulette">
-                        Roulette
-                    </div>
-                    <div id="browse">
-                        Browse
-                    </div>
-                    <div id="submit">
-                        Submit
-                    </div>
+                    <a href="../roulette/config/config.html">
+                        <div id="roulette">
+                            Roulette
+                        </div>
+                    </a>
+                    <a href="../browse/browse.html">
+                        <div id="browse">
+                            Browse
+                        </div>
+                    </a>
+                    <a href="../submit/submit.html">
+                        <div id="submit">
+                            Submit
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="userinfo">
@@ -44,7 +50,7 @@
 			<table id="usertable">
 			<tr>
 				<td id="avatar">
-					<img src="http://c3e308.medialib.glogster.com/media/8d/8d4428ecbfb7e2aa0b871a1402101b598138fcb5ce8f77246edd6eb99da7d54f/lassie-jpg.jpg" id="avatarimage"/>
+					<img src="../images/Sparkey Logo Orange.png" id="avatarimage"/>
 				</td>
 			</tr>
 			<tr>
@@ -107,9 +113,13 @@
 	   </div>
 	   <div id="uservibes">
 			<h1>Vibes</h1>
-			<span id="vibecloud"><img src="https://informatics134.mybalsamiq.com/projects/team2/assets/Lassie%20Vampire%20Cloud%20Transparent.png"/></span>
+			<span id="vibecloud" ></span>
 	   </div>
     </body>
     <footer>
+        <script src="../script/jquery-2.1.1.js"></script>
+        <script src="../script/lib/d3/d3.js"></script>
+        <script src="../script/d3.layout.cloud.js"></script>
+        <script src="./script/profile.js"></script>
     </footer>
 </html>

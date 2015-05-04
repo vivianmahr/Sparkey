@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="./css/default.css"></style>
-        <link rel="stylesheet" type="text/css" href="./css/reset.css"></style>
+        <link rel="stylesheet" type="text/css" href="../css/default.css"></style>
+		<link rel="stylesheet" type="text/css" href="./css/submit.css"></style>
+        <link rel="stylesheet" type="text/css" href="../css/reset.css"></style>
     </head>
     <header>
         <div id="header">
@@ -11,17 +12,17 @@
             </div>
             <div id="nav-button-wrapper">
                 <div id="nav-button">
-                    <a href="./roulette/config/config.html">
+                    <a href="../roulette/config/config.html">
                         <div id="roulette">
                             Roulette
                         </div>
                     </a>
-                    <a href="./browse/browse.html">
+                    <a href="../browse/browse.html">
                         <div id="browse">
                             Browse
                         </div>
                     </a>
-                    <a href="./submit/submit.html">
+                    <a href="../submit/submit.html">
                         <div id="submit">
                             Submit
                         </div>
@@ -45,7 +46,35 @@
         </div>
     </header>
     <body>
-       
+       <form id="formwrapper" style="text-align:center">
+			<span id="formtitle">Submit</span>
+			<br/>
+				Title
+				<br/>
+				<textarea id="textinput" rows="1"></textarea>
+			<br/>
+			<br/>
+				<div style="border-style:dotted;border-width:thin;padding:20%;">
+				Drag a file here
+				</br>
+				or
+				</br>
+				<input type="file">
+				</div>
+			<br/>
+			<br/>
+				Description
+			<br/>
+				<textarea id="textinput" rows="5"></textarea>
+			<br/>
+			<br/>
+				Vibes
+			<br/>
+				<textarea id="textinput" rows="5"></textarea>
+			<br/>
+			<br/>
+				<input type="submit" value="Submit" id="submitbutton">
+	   </form>
     </body>
     <footer>
     </footer>
