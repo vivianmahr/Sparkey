@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="../../css/default.css"></style>
-		<link rel="stylesheet" type="text/css" href="./css/config.css"></style>
+		<link rel="stylesheet" type="text/css" href="./css/roulette.css"></style>
         <link rel="stylesheet" type="text/css" href="../../css/reset.css"></style>
     </head>
     <header>
@@ -46,35 +46,79 @@
         </div>
     </header>
     <body>
-       <form id="rouletteform">
-			<span id="roulettetitle">Roulette</span>
-			<br/>
-				<span id="contentcheckboxes">
-				<input type="checkbox" name="content type" value="Text" id="textcheckbox">Text
-				<input type="checkbox" name="content type" value="Photo" id="photocheckbox">Photo
-				<input type="checkbox" name="content type" value="Video" id="videocheckbox">Video
-				</span>
-			<br/>
-			<br/>
-				<span style="text-align:left">Vibes</span>
-			<br/>
-				<textarea id="vibeinput" rows="5">What do you want to see?</textarea>
-			<br/>
-			<br/>
-				Size
-			<br/>
-				<select>
-					<option value="10">10</option>
-					<option value="20">20</option>
-					<option value="30">30</option>
-					<option value="40">40</option>
-					<option value="50">50</option>
-				</select>
-			<br/>
-			<br/>
-				<input type="submit" value="Go!" id="submitbutton">
-	   </form>
+        <div id="tablewrapper">
+            <table id="contenttable">
+                <tr>
+                    <td></td>
+                    <td><span class="red" style="font-size:2rem">*</span> <span id="contenttitle">Starry Night</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="arrow"><<br/><button style="vertical-align:none;">||></button></td>
+                    <td><img src="http://uploads2.wikiart.org/images/vincent-van-gogh/the-starry-night-1889(1).jpg"/></td>
+                    <td class="arrow">></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="contentdescription">A quick 5-min drawing in class.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="hmmbox">Did it make you <button>Hmm</button>?</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <table id="tabs">
+                        <tr id="tab-header">
+                            <th id="vibetab" class="selected">Vibes</th>
+                            <th id="commentstab">Comments</th>
+                        </tr>
+                            <tr id="comment-tab-1">
+                                <td class="feedbackbox" colspan="2">
+                                    <form>
+                                        <textarea id="vibeinput" rows="5"></textarea>
+                                        <br/>
+                                        <br/>
+                                        <input type="submit" value="Submit" id="submitbutton"/>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr id="comment-tab-2">
+                                <td colspan="2" class="commentwrapper">
+                                    <table class="comment">
+                                    <tr>
+                                        <td><a href="#">Lassie</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>This is pawsitively awesom! Like fresh blood dripping onto my fur :3</td>
+                                    </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr id="vibes-tab" class="hidden">
+                                <td class="feedbackbox" colspan="2">
+                                    <form>
+                                        <textarea id="vibeinput" rows="5"></textarea>
+                                        <br/>
+                                        <br/>
+                                        <input type="submit" value="Submit" id="submitbutton"/>
+                                    </form>
+                                </td>
+                            </tr>
+                       </table>
+                   </td>
+                   <td></td>
+                </tr>
+           </table>
+       </div>
     </body>
     <footer>
+        <script src="../../script/jquery-2.1.1.js"></script>
+        <script src="../../script/lib/d3/d3.js"></script>
+        <script src="../../script/d3.layout.cloud.js"></script>
+        <script src="./script/search.js"></script>
     </footer>
 </html>

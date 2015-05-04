@@ -1,0 +1,107 @@
+#tablewrapper
+{
+	max-width:73%;
+	margin:auto;
+}
+
+#contenttable
+{
+	text-align:center;
+}
+
+#contenttable td
+{
+	padding:2% 0;
+}
+
+#contenttitle
+{
+	font-size:2rem;
+	font-weight:bold;
+}
+
+.arrow
+{
+	width:20%;
+	vertical-align:middle;
+	padding:0% 20%;
+	font-size:2rem;
+	font-weight:bold;
+}
+
+img
+{
+	max-width:100%;
+}
+
+#contentdescription
+{
+	border-style:dotted;
+	border-width:thin;
+}
+
+#hmmbox
+{
+	border-style:solid;
+	border-width:thin;
+	padding:2%;
+}
+
+#tabs
+{
+	margin:auto;
+	width:100%;
+	
+}
+
+#tabs th
+{
+	background: rgba(199, 95, 102, 0.5);
+	padding:2%;
+	width:33%;
+	border-radius:0px 15px 0px 0px;
+}
+
+.feedbackbox
+{
+	background: rgba(199, 95, 102, 0.5);
+	text-align:center;
+
+}
+
+#vibeinput
+{
+	text-align:center;
+	width:90%;
+}
+
+.commentwrapper
+{
+	width:100%;
+	text-align:left;
+	background: rgba(199, 95, 102, 0.5);
+	border-style:solid none;
+	border-width:thin;
+	
+}
+
+.comment
+{
+	margin:0 2%;
+}
+
+.hidden 
+{
+    display: none;
+}
+
+#tab-header th 
+{
+    background: #d48379;
+}
+
+#tab-header .selected 
+{
+    background: #e2a78d;
+}
+
