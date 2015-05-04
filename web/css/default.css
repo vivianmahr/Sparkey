@@ -3,6 +3,11 @@
 	font-family: 'Century Gothic', sans-serif !important;
 }
 
+a
+{
+	color:#953246
+}
+
 html
 {
     background: #FEF1B5;
@@ -59,7 +64,7 @@ html
 {
     float: left;
     font-size: 3rem;
-	background-image:url("C:/Users/tams/Desktop/INF 134/Sparkey/web/images/Sparkey Logo Orange.png");
+	background-image:url("../images/Sparkey%20Logo%20Orange.png");
 	background-size:3rem;
 	background-repeat:no-repeat;
 	padding-left:3rem;
