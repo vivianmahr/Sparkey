@@ -11,8 +11,6 @@
 
 #contenttable td
 {
-	/*border-style:solid;
-	border-width:thin;*/
 	padding:2% 0;
 }
 
@@ -53,7 +51,7 @@ img
 {
 	margin:auto;
 	width:100%;
-	padding:2%;
+	
 }
 
 #tabs th
@@ -61,19 +59,33 @@ img
 	background: rgba(199, 95, 102, 0.5);
 	padding:2%;
 	width:33%;
-	
 	border-radius:0px 15px 0px 0px;
 }
 
 #feedbackbox
 {
 	background: rgba(199, 95, 102, 0.5);
-	
-	text-align:right;
-	padding:2%;
+	text-align:center;
+
 }
 
 #vibeinput
 {
-	width:98%;
+	text-align:center;
+	width:90%;
+}
+
+.commentwrapper
+{
+	width:100%;
+	text-align:left;
+	background: rgba(199, 95, 102, 0.5);
+	border-style:solid none;
+	border-width:thin;
+	
+}
+
+.comment
+{
+	margin:0 2%;
 }
