@@ -38,6 +38,7 @@ img
 {
 	border-style:dotted;
 	border-width:thin;
+	background: rgba(199, 95, 102, 0.5);
 }
 
 #hmmbox
@@ -105,3 +106,39 @@ img
     background: #e2a78d;
 }
 
+#gallerybar
+{
+	left:20%;
+	bottom:5%;
+	position:fixed;
+	z-index:100;
+}
+
+#gallerybar table td
+{
+	vertical-align:middle;
+	
+}
+
+#gallery
+{
+	background: rgba(159, 112, 58, 1);
+}
+
+#gallerybutton
+{
+	background: rgba(159, 112, 58, 0.5);
+	border-color:background: rgba(159, 112, 58, 1);
+}
+
+#icons td
+{
+	height:50px;
+	padding:2%
+}
+
+#icons td img
+{
+	max-width:100%;
+	max-height:100%;
+}
