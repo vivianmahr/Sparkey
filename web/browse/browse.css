@@ -1,0 +1,90 @@
+#browsewrapper
+{
+	max-width:33%;
+	margin: 2% auto;
+	padding:2%;
+}
+
+#title
+{
+	display:block;
+	text-align:center;
+	font-weight:bold;
+	font-size:2rem;
+}
+
+#browseoptions
+{
+	margin:auto;
+	font-weight:bold;
+	width:60%;
+}
+
+#browseoptions td
+{
+	white-space:nowrap;
+	padding:2%;
+}
+
+#hmms
+{
+	background: rgba(199, 95, 102, 1);
+}
+
+#sparks
+{
+	background: rgba(199, 95, 102, 0.5);
+}
+
+#browseconfig
+{
+	width:100%;
+}
+
+#browseconfig  > td
+{
+	
+	width:100%;
+}
+
+#browseconfig img
+{
+	width:50px;
+}
+
+#textinput
+{
+	width:99%;
+}
+
+#video
+{
+	background: rgba(199, 95, 102, 0.5);
+}
+
+.typetable
+{
+	width:100%;
+	
+}
+
+.typetable td
+{
+	padding:0 2%;
+	vertical-align:middle;
+}
+
+#text
+{
+	background: rgba(95, 128, 199, 0.5);
+}
+
+#photo
+{
+	background: rgba(199, 95, 154, 0.5);
+}
+
+.blank
+{
+	height:1rem;
+}
