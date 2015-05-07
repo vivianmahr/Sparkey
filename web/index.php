@@ -14,11 +14,12 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
 
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
+  header('Location: index.html');
+    exit;
   return 'Hello, the test push has worked';
 });
 
 
-///erwjrjosdifjaosigoe;gn
 $app->run();
 
 ?>
