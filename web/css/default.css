@@ -8,6 +8,11 @@ a
 	color:#953246
 }
 
+a #logo
+{
+	color:#333041;
+}
+
 button
 {
 	background: rgba(199, 95, 102, 0.5);
