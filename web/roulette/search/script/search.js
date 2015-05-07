@@ -1,6 +1,12 @@
 $(function () {
     var enteredVibes = false;
     var tab = "vibes";
+    var galleryExpanded = false;
+    // Right now, no way to actually check
+    if (enteredVibes) {
+        $("#vibes-tab td").html("<div id='cloudbox'></div>");
+        fillInVibes();
+    }
     
     $("#vibetab").click(function(){
         tab = "vibes";
@@ -9,7 +15,6 @@ $(function () {
         $("#comment-tab-2").addClass("hidden");
         $("#commentstab").removeClass("selected");
         $("#vibetab").addClass("selected");
-        console.log(tab);
     });
     
     $("#commentstab").click(function() {
@@ -19,7 +24,16 @@ $(function () {
         $("#vibes-tab").addClass("hidden");
         $("#commentstab").addClass("selected");
         $("#vibetab").removeClass("selected");
-        console.log(tab);
     });
     
+    $("#gallerybutton").click(function() {
+        galleryExpanded = !galleryExpanded;
+        if (galleryExpanded) {
+            $("#gallerybutton").html("<||");
+        }
+        else {
+            $("#gallerybutton").html("||>   ");
+        }
+        $("#gallery").toggleClass("hidden");
+    });
 });

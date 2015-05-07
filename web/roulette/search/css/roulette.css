@@ -29,6 +29,11 @@
 	font-weight:bold;
 }
 
+.arrow a {
+    text-decoration: none;
+    color: #333041;
+}
+
 img
 {
 	max-width:100%;
@@ -96,6 +101,12 @@ img
     display: none;
 }
 
+#gallery.hidden 
+{
+    display: inline-block;
+    visibility: hidden;
+}
+
 #tab-header th 
 {
     background: #d48379;
@@ -112,6 +123,7 @@ img
 	bottom:5%;
 	position:fixed;
 	z-index:100;
+    left: 0;
 }
 
 #gallerybar table td
