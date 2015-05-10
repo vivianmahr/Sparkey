@@ -1,4 +1,4 @@
-#formwrapper
+.formwrapper
 {
 	background: rgba(199, 95, 102, 0.5);
 	border-style:dashed;
@@ -10,7 +10,7 @@
 	padding:2%;
 }
 
-#formtitle
+.formtitle
 {
 	display:block;
 	text-align:center;
@@ -18,7 +18,7 @@
 	font-size:2rem;
 }
 
-#textinput
+.formtextinput
 {
 	width:99%;
 }
