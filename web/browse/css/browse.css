@@ -82,9 +82,7 @@
 	height:1rem;
 }
 
-#browseconfig h5 
+textarea
 {
-    background: #FFFFFF;
-    border: 1px solid #333042;
-    padding: 3px;
+    width:99%;
 }
