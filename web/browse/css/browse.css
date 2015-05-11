@@ -88,3 +88,33 @@
     border: 1px solid #333042;
     padding: 3px;
 }
+
+.postinfo
+{
+	border: 1px solid #333042;
+	width:100%;
+	background:#FFFFFF;
+	table-layout:fixed;
+}
+
+.postinfo img
+{
+	height:auto;
+	max-width:1.5rem;
+}
+
+.postinfo td
+{
+	padding:1%;
+}
+
+.posttitle
+{
+
+}
+
+.counters
+{
+	text-align:right;
+	font-weight:bold;
+}
