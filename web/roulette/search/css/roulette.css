@@ -53,6 +53,14 @@ img
 	padding:2%;
 }
 
+#hmmbox img
+{
+	height:auto;
+	max-width:3rem;
+	vertical-align:middle;
+}
+
+
 #tabs
 {
 	margin:auto;
@@ -154,3 +162,4 @@ img
 	max-width:100%;
 	max-height:100%;
 }
+
