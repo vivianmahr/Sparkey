@@ -1,10 +1,11 @@
 .formwrapper
 {
 	background: rgba(199, 95, 102, 0.5);
-	border-style:dashed;
+	border-style:none;
 	border-width:medium;
 	border-color:#953246;
 	border-radius:15px;
+	box-shadow: 2px 2px 5px #888888;
 	max-width:33%;
 	margin:2% auto;
 	padding:2%;
@@ -23,9 +24,32 @@
 	width:99%;
 }
 
+textarea:hover
+{
+	outline:#953246 dashed thin;
+}
+
+textarea:focus
+{
+	background:#953246;
+	color:#FFFFFF;
+	outline:none;
+}
+
 #submitbutton
 {
 	display:block;
 	margin:auto;
+	border-radius:15px;
 }
 
+#submitbutton:hover
+{
+	background:#333041;
+	color:#FFFFFF;
+}
+
+#submitbutton:focus
+{
+	outline:none;
+}

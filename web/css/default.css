@@ -8,6 +8,11 @@ a
 	color:#953246
 }
 
+a:hover, #username:hover, #logout:hover
+{
+	color:#333041;
+}
+
 a #logo
 {
 	color:#333041;
