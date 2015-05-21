@@ -1,0 +1,2 @@
+module RouletteConfigHelper
+end

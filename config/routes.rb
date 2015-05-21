@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
   get 'splash_page/index'
+  get 'roulette_config', to: 'roulette_config'
+  get 'roulette_search', to: 'roulette_search'
+  get 'browse', to: 'browse'
+  get 'submit', to: 'submit'
   get 'profile/:user', to: 'profile#user'
 
   resources :widgets

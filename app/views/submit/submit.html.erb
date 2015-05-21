@@ -1,0 +1,73 @@
+<header>
+    <div id="header">
+        <a href="user">
+        <div id="logo">
+            Spar<span class="red">k</span>ey
+        </div>
+        </a>
+        <div id="nav-button-wrapper">
+            <div id="nav-button">
+                <a href='roulette'>
+                    <div id="roulette">
+                        Roulette
+                    </div>
+                </a>
+                <a href='browse'>
+                    <div id="browse">
+                        Browse
+                    </div>
+                </a>
+                <a href="submit">
+                    <div id="submit">
+                        Submit
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="userinfo">
+            <a href="user">
+                <div id="username">
+                    Lassie
+                </div>
+            </a>
+            <span class="division">
+            </span>
+            <%= link_to("../..") do %>
+                <div id="logout">
+                    Logout
+                </div>
+            <% end %>
+        </div>
+    </div>
+</header>
+<body>
+       <form class="formwrapper" style="text-align:center">
+            <span class="formtitle">Submit</span>
+            <br/>
+                Title
+                <br/>
+                <textarea class="formtextinput" rows="1"></textarea>
+            <br/>
+            <br/>
+                <div style="border-style:dotted;border-width:thin;padding:20%;">
+                Drag a file here
+                </br>
+                or
+                </br>
+                <input type="file">
+                </div>
+            <br/>
+            <br/>
+                Description
+            <br/>
+                <textarea class="formtextinput" rows="5"></textarea>
+            <br/>
+            <br/>
+                Vibes
+            <br/>
+                <textarea class="formtextinput" rows="5"></textarea>
+            <br/>
+            <br/>
+                <input type="submit" value="Submit" id="submitbutton">
+       </form>
+    </body>

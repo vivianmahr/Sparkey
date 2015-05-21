@@ -1,0 +1,120 @@
+#browsewrapper
+{
+	max-width:33%;
+	margin: 2% auto;
+	padding:2%;
+}
+
+#title
+{
+	display:block;
+	text-align:center;
+	font-weight:bold;
+	font-size:2rem;
+}
+
+#browseoptions
+{
+	margin:auto;
+	font-weight:bold;
+	width:60%;
+}
+
+#browseoptions td
+{
+	white-space:nowrap;
+	padding:2%;
+}
+
+.browse-option
+{
+	background: rgba(199, 95, 102, 0.5);
+}
+
+.selected {
+    background: #c75f66;
+}
+
+#browseconfig
+{
+	width:100%;
+}
+
+#browseconfig  > td
+{
+	width:100%;
+}
+
+#browseconfig img
+{
+	width:50px;
+}
+
+.video
+{
+	background: rgba(199, 95, 102, 0.5);
+}
+
+.typetable
+{
+	width:100%;
+    margin-top: 1rem;
+}
+
+.typetable td
+{
+	padding:0 3%;
+	vertical-align:middle;
+}
+
+.text
+{
+	background: rgba(95, 128, 199, 0.5);
+}
+
+.photo
+{
+	background: rgba(199, 95, 154, 0.5);
+}
+
+.blank
+{
+	height:1rem;
+}
+
+#browseconfig h5 
+{
+    background: #FFFFFF;
+    border: 1px solid #333042;
+    padding: 3px;
+}
+
+.postinfo
+{
+	border: 1px solid #333042;
+	width:100%;
+	background:#FFFFFF;
+	table-layout:fixed;
+}
+
+.postinfo img
+{
+	height:auto;
+	max-width:1.5rem;
+}
+
+.postinfo td
+{
+	padding:1%;
+}
+
+.posttitle
+{
+
+}
+
+.counters
+{
+	text-align:right;
+	font-weight:bold;
+}
