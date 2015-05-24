@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <header>
+        <div id="header">
+            <%= link_to(@root_path) do %>
+                <div id="logo">
+                    <%= image_tag "Sparkey Logo Orange.png" %>
+                    Spar<span class="red">k</span>ey
+                </div>
+            <% end %>
+        </div>
+	</header>
+
+<body>
+	<h1>Submit</h1>
+
+	<%= form_for :submit do |f| %>
+	  <p>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	  </p>
+	 
+	 <p>
+		<%= f.file_field :photo %>
+	  </p>
+	 
+	  <p>
+		<%= f.label :description %><br>
+		<%= f.text_area :text %>
+	  </p>
+	 
+	 <p>
+		<%= f.label :vibes %><br>
+		<%= f.text_area :text %>
+	  </p>
+	 
+	  <p>
+		<%= f.submit "Submit" %>
+	  </p>
+	<% end %>
+</body>
+    <footer>
+    </footer>
+</html>
