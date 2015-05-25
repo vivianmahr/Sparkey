@@ -1,0 +1,2 @@
+module RouletteSearchesHelper
+end
