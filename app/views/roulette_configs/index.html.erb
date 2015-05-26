@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../../css/default.css"></style>
-		<link rel="stylesheet" type="text/css" href="../../css/form.css"></style>
-        <link rel="stylesheet" type="text/css" href="../../css/reset.css"></style>
-    </head>
+		<% stylesheet_link_tag 'default'%>
+		<% stylesheet_link_tag 'form'%>
+		<% stylesheet_link_tag 'reset'%>
+    </head>	
     <header>
         <div id="header">
 			<a href="../../profile/profile.html">
@@ -14,17 +14,17 @@
 			</a>
             <div id="nav-button-wrapper">
                 <div id="nav-button">
-                    <a href="../config/config.html">
+                    <a href="../roulette_configs">
                         <div id="roulette">
                             Roulette
                         </div>
                     </a>
-                    <a href="../../browse/browse.html">
+                    <a href="../browse">
                         <div id="browse">
                             Browse
                         </div>
                     </a>
-                    <a href="../../submit/submit.html">
+                    <a href="../submit">
                         <div id="submit">
                             Submit
                         </div>
@@ -48,7 +48,7 @@
         </div>
     </header>
     <body>
-       <form class="formwrapper" action="../../search/search.htmL">
+       <form class="formwrapper" action="../roulette_searches">
 			<span class="formtitle">Roulette</span>
 			<br/>
 				<span id="contentcheckboxes">

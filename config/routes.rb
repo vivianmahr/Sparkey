@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 	resources :submit
 	resources :roulette_configs
-	resources :roueltte_search
+	resources :roulette_searches
 	
   
   #get '/login', :to => 'session#login'
