@@ -16,7 +16,9 @@
 
 	<p>
 	  <strong>Title:</strong>
-	  <%= @uploaded_io.original_filename %>
+	  <%= link_to(@root_path) do %>
+	  <%= image_tag "../uploads/#{@uploaded_io.original_filename}" %>
+	  <% end %>
 	</p>
 
 </body>

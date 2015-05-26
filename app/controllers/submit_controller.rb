@@ -4,9 +4,9 @@ class SubmitController < SessionController
 	end
 	
 	def create
-		uploaded_io = params[:submit][:picture]
-			File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
-				file.write(uploaded_io.read)
+		@uploaded_io = params[:submit][:picture]
+			File.open(Rails.root.join('public', 'uploads', @uploaded_io.original_filename), 'wb') do |file|
+				file.write(@uploaded_io.read)
 			end
 	end
 	
