@@ -26,12 +26,12 @@
         </div>
 
         <%= form_for :user, url: create_path do |f| %>
-                <%= f.text_field :username %>
-                <%= f.label(:username, "Username") %>
+                <%= f.text_field :name %>
+                <%= f.label(:name, "Username") %>
                 <%= f.text_field :email%>
                 <%= f.label(:email, "Email") %>
-                <%= f.password_field :password_1 %>
-                <%= f.label(:password_1, "Password") %>
+                <%= f.password_field :password %>
+                <%= f.label(:password, "Password") %>
                 <%= f.password_field :password_2%>
                 <%= f.label(:password_2, "Confirm Password") %>
                 <%= f.submit :value => "Create" %>
