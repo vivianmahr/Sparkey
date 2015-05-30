@@ -1,20 +1,9 @@
 Rails.application.routes.draw do
-
-  get 'splash_page/index'
-  get 'roulette_config', to: 'roulette_config'
-  get 'roulette_search', to: 'roulette_search'
-  get 'browse', to: 'browse'
-  get 'submit', to: 'submit'
-  get 'profile/:user', to: 'profile#user'
-
-  resources :widgets
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-
-  root 'splash_page#index'
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
