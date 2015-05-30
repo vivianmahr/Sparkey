@@ -4,9 +4,7 @@ ruby '1.9.3', :engine => 'jruby', :engine_version => '1.7.19'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
-# Use postgresql as the database for Active Record
-gem 'activerecord-jdbcpostgresql-adapter'
-gem 'rails_12factor', group: :production
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -34,6 +32,12 @@ gem 'spring',        group: :development
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :jruby]
 
 gem 'puma'
+
+gem 'devise'
+
+gem 'sqlite3'
+
+#gem 'pg', '~> 0.18.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
