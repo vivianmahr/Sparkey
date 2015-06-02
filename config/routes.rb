@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
+  # static_pages_controller
+  get '/roulette' => 'static_pages#roulette'
+  get '/submit' => 'static_pages#submit'
+  get '/data' => 'static_pages#data'
 
-  get 'static_pages/roulette'
-  get 'static_pages/submit'
+  # posts_controller
+  get '/post' => 'posts#post'
+  get '/browse' => 'posts#browse'
+
+  # users_controller
+  get '/user' => 'users#user'
+
+  # roulettes_controller
+  get '/results' => 'roulettes#results'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
