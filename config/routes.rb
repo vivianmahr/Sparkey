@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # static_pages_controller
   get '/roulette' => 'static_pages#roulette'
   get '/submit' => 'static_pages#submit'
