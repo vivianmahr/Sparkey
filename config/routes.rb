@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  # unsecured_pages controller
+  get '/data' => 'unsecured_pages#data'
+
   # static_pages_controller
   get '/roulette' => 'static_pages#roulette'
   get '/submit' => 'static_pages#submit'
-  get '/data' => 'static_pages#data'
+  
 
   # posts_controller
   get '/post' => 'posts#post'
@@ -21,7 +25,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'static_pages#splash'
+  root 'users#user'
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
     <header>
-        <%= stylesheet_link_tag "bootstrap.min.css", "bootstrap-theme.min.css", "default.css" %>
-        <%= javascript_include_tag "jquery-2.1.1.js", "bootstrap.min.js" %>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="./css/default.css">
+        <script src="./js/jquery-2.1.1.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
     </header>
     <body>
         <div id="wrap">
             <nav class="navbar navbar-static-top">
               <div class="container">
                 <div class="navbar-header">
-                  <%= image_tag "Sparkey Logo Orange.png", :id => "logo" %>
+                  <img id="logo" src="./images/Sparkey Logo Orange.png">
                   <a class="navbar-brand" href="#">
                     Spar<span class="dark-red">k</span>ey
                   </a>
@@ -21,7 +25,13 @@
                         <input type="password" placeholder="password"/>
                         <input type="submit" value="Login" />
                     </form>
-                   
+                    <!-- erb for the login form
+                        <%= form_for :user, url: login_path do |f| %>
+                            <%= f.text_field :username, :placeholder => "Username" %>
+                            <%= f.password_field :password %>
+                            <%= f.submit :value => "Login" %>
+                        <% end %>
+                    -->
                   </div>
                 </div>
               </div>
@@ -64,7 +74,22 @@
                                 <div class="clearer">&nbsp;</div>
                             <form>
                         </div>
-                        
+                        <!--For the create, erb
+                            <%= form_for :user, url: create_path do |f| %>
+                                <%= f.text_field :email, :placeholder => "email"%>
+                                <div class="clearer">&nbsp;</div>
+                                <%= f.text_field :name, :placeholder => "username"%>
+                                <div class="clearer">&nbsp;</div>
+                                <%= f.password_field :password, :placeholder => "password"%>
+                                <div class="clearer">&nbsp;</div>
+                                <%= f.password_field :password_2 :placeholder => "confirm password"%>
+                                <div class="clearer">&nbsp;</div>
+                                <%= f.submit :value => "Sign Up!" %>
+                                <div class="clearer">&nbsp;</div>
+                            <% end %>
+                            
+                            :class => 'submit_class_name_here'
+                        -->
                     </div>
                 </div>
             </div>
@@ -77,4 +102,3 @@
         </div>
     </body>
 </html> 
-
