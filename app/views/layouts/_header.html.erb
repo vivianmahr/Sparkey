@@ -1,0 +1,56 @@
+<% if !yield(:static) %>
+	<nav class="navbar navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<%= image_tag("Sparkey Logo Orange.png", :alt => "Sparkey", :id => "logo") %>
+				<a class="navbar-brand" href="#">
+					Spar<span class="dark-red">k</span>ey
+				</a>
+			</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<div class="navbar-center-wrapper">
+				<ul class="nav navbar-nav navbar-center">
+				    <li class="active"><a href="./roulette_config.html">Roulette</a></li>
+				    <li><a href="./browse.html">Browse</a></li>
+				    <li><a href="./submit.html">Submit</a></li>
+				</ul>
+			</div>
+			<div class="nav navbar-nav navbar-right">
+				<div id="user-options">
+				    <a href="./profile.html" class="red-link"> Username </a>
+				    <span class="divider">|</span>
+				    <a href="./splash_page.html" class="red-link"> Logout </a>
+				</div>
+			</div>
+		</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+<% else %>
+	<nav class="navbar navbar-static-top">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <%= image_tag("Sparkey Logo Orange.png", :alt => "Sparkey", :id => "logo") %>
+	      <a class="navbar-brand" href="#">
+	        Spar<span class="dark-red">k</span>ey
+	      </a>
+	    </div>
+	    <div id="navbar" class="navbar-collapse collapse">
+	      <div class="nav navbar-nav navbar-right">
+	        <form>  
+	            <input type="text" placeholder="username"/>
+	            <input type="password" placeholder="password"/>
+	            <input type="submit" value="Login" />
+	        </form>
+	        <!-- erb for the login form, IDK the variables yet
+	            <%#= form_for @user, url: login_path do |f| %>
+	                <%#= f.text_field :username, :placeholder => "Username" %>
+	                <%#= f.password_field :password %>
+	                <%#= f.submit :value => "Login" %>
+	            <%# end %>
+	        -->
+	      </div>
+	    </div>
+	  </div>
+	</nav>
+<% end %>

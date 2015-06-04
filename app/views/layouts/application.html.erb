@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>GitSparkey</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<title>
+			<%= yield(:title) %>
+		</title>
+		<%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= stylesheet_link_tag "bootstrap.min.css", "bootstrap-theme.min.css", "default.css" %>
+        <%= javascript_include_tag "jquery-2.1.1.js", "bootstrap.min.js" %>
+		<%= yield :head %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="wrap">
+			<%= render 'layouts/header' %>
 
-<%= yield %>
-
-</body>
+				<%= yield %>
+			<div id="push"></div>
+		</div>
+		<%= render 'layouts/footer' %>
+	</body>
 </html>
