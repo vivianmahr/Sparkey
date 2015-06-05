@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  # Devise
+
+  # Use our own controller so that the sign up form also takes in a username field
+  devise_for :users, :controllers => { registrations: 'registrations' }  
 
   # unsecured_pages controller
   get '/data' => 'unsecured_pages#data'
@@ -36,7 +39,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  resources :users
+  #resources :users
   resources :posts
   # Example resource route with options:
   #   resources :products do
