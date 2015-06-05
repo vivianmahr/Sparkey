@@ -37,32 +37,13 @@
 	    </div>
 	    <div id="navbar" class="navbar-collapse collapse">
 	      <div class="nav navbar-nav navbar-right">
-	        <!-- <form>  
-	            <input type="text" placeholder="username"/>
-	            <input type="password" placeholder="password"/>
-	            <input type="submit" value="Login" />
-	        </form>
-	        -->
-	        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-			  <div class="">
+			 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 			    <%= f.email_field :email, autofocus: true, :placeholder => "email" %>
-			  </div>
-
-			  <div class="">
+			 
 			    <%= f.password_field :password, autocomplete: "off", :placeholder => "password" %>
-			  </div>
-
-			  <div class="actions">
+			 
 			    <%= f.submit "Login" %>
-			  </div>
-			<% end %>
-	        <!-- erb for the login form, IDK the variables yet
-	            <%#= form_for @user, url: login_path do |f| %>
-	                <%#= f.text_field :username, :placeholder => "Username" %>
-	                <%#= f.password_field :password %>
-	                <%#= f.submit :value => "Login" %>
-	            <%# end %>
-	        -->
+			 <% end %>
 	      </div>
 	    </div>
 	  </div>

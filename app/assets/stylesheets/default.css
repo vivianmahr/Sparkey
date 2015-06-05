@@ -86,7 +86,7 @@ html, body {
     margin-right: 2rem;
 }
 
-.nav input[type=text], .nav input[type=password] {
+.nav input[type=text], .nav input[type=password], .nav input[type=email] {
     width: 15rem;
 }
 
@@ -94,7 +94,7 @@ input, textarea {
     outline: none;
 }
 
-input[type=text], input[type=password], textarea{
+input[type=text], input[type=password], textarea, input[type=email]{
     border: 3px solid #4F2601;
     font-size: 1.5rem;
     padding-left: .5rem;

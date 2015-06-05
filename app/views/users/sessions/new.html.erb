@@ -53,7 +53,7 @@
 
                         <% if @minimum_password_length %>
                         <em>(<%= @minimum_password_length %> characters minimum)</em>
-                        <% end %><br />
+                        <% end %>
                         <%= f.password_field :password, autocomplete: "off", :placeholder => "password", :class => "long" %>
                         <div class="clearer">&nbsp;</div>                    
                       
