@@ -1,11 +1,11 @@
 @font-face {
     font-family: Latine;
-    src: url("../fonts/Latine.ttf"); 
+    src: url('Latine.ttf');
 }
 
 html, body {
     background: #FEF1B5;
-    font-family: Latine, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: "Latine", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     height: 100%
 }
 
@@ -533,4 +533,14 @@ input[type=file]:hover  {
 
 video {
     width: 100%;
+}
+
+#cloud {
+    width: 25rem;
+    height: 28rem;
+    margin: auto;
+}
+#cloud span {
+    color: #4F2601;
+    font-family: "Latine", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
