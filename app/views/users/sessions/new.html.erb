@@ -1,5 +1,4 @@
 <% provide(:title, "Sparkey") %>
-<% provide(:static, true) %>
 <% content_for :head do %>
 <% end %>
 
@@ -26,22 +25,6 @@
                 <h3 >
                     Sign up!
                 </h3>
-                <!--
-                <form>
-                    <input class="long" type="text" placeholder='email'/>
-                    <div class="clearer">&nbsp;</div>
-                    <input class="long" type="text" placeholder='username'/>
-                    <div class="clearer">&nbsp;</div>
-                    <input class="long" type="password" placeholder='password'/>
-                    <div class="clearer">&nbsp;</div>
-                    <input class="long" type="password" placeholder='confirm password'/>
-                    <div class="clearer">&nbsp;</div>
-                    <div class="clearer">&nbsp;</div>
-                    <input type="submit" value='Sign Up'/>
-                    <div class="clearer">&nbsp;</div>
-                    <div class="clearer">&nbsp;</div>
-                <form>
-                -->
                 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
                     <%= devise_error_messages! %>
                      

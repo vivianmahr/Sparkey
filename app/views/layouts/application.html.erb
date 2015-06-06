@@ -7,14 +7,14 @@
 		<%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= stylesheet_link_tag "bootstrap.min.css", "bootstrap-theme.min.css", "default.css" %>
         <%= javascript_include_tag "jquery-2.1.1.js", "bootstrap.min.js" %>
-		<%= yield :head %>
 		<%= csrf_meta_tags %>
+		<%= yield :head %>
 	</head>
 	<body>
 		<div id="wrap">
 			<%= render 'layouts/header' %>
 
-				<%= yield %>
+			<%= yield %>
 			<div id="push"></div>
 		</div>
 		<%= render 'layouts/footer' %>
