@@ -17,9 +17,9 @@
 			</div>
 			<div class="nav navbar-nav navbar-right">
 				<div id="user-options">
-				    <a href="./profile.html" class="red-link"> Username </a>
+				    <a href="./profile.html" class="red-link"> <%= current_user.username %> </a>
 				    <span class="divider">|</span>
-				    <a href="./splash_page.html" class="red-link"> Logout </a>
+				    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
 				</div>
 			</div>
 		</div><!--/.nav-collapse -->
