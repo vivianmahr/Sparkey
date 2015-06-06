@@ -10,9 +10,25 @@
 		<div id="navbar" class="navbar-collapse collapse">
 			<div class="navbar-center-wrapper">
 				<ul class="nav navbar-nav navbar-center">
-				    <li class="active"><a href="./roulette_config.html">Roulette</a></li>
-				    <li><a href="./browse.html">Browse</a></li>
-				    <li><a href="./submit.html">Submit</a></li>
+					<% selected = yield(:selected) %>
+					<% if selected.include? "roulette" %>
+					    <li class="active"><a href="./roulette_config.html">Roulette</a></li>
+					    <li><a href="./browse.html">Browse</a></li>
+				    	<li><a href="./submit.html">Submit</a></li>
+			    	<% else %>
+		    			<li><a href="./roulette_config.html">Roulette</a></li>
+				    	<% if selected.include? "browse"%>
+					    	<li class="active"><a href="./browse.html">Browse</a></li>
+					    	<li><a href="./submit.html">Submit</a></li>
+					  	<% else %>
+				  			<li><a href="./browse.html">Browse</a></li>
+					  		<% if selected.include? "submit"%>
+				  				<li class="active"><a href="./submit.html">Submit</a></li>
+			  				<% else %>
+		  						<li><a href="./submit.html">Submit</a></li>
+			  				<% end %>
+						<% end %>
+					<% end %>
 				</ul>
 			</div>
 			<div class="nav navbar-nav navbar-right">
