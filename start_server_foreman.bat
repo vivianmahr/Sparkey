@@ -1,1 +1,0 @@
-foreman start web -f Procfile.windows

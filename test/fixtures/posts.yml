@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text_content: MyText
+  image_path: MyString
+  video_path: MyString
+  spark_count: 1
+
+two:
+  text_content: MyText
+  image_path: MyString
+  video_path: MyString
+  spark_count: 1

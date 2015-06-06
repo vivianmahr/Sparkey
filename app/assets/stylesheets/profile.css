@@ -1,0 +1,68 @@
+#profile
+{
+	margin-top:30px;
+	margin-left:20%;
+	width:60%;
+}
+
+.page
+{
+	width:50%;
+	height:auto;
+	text-align:center;
+	position:relative;
+}
+
+.pageimage
+{
+	max-width:100%;
+	z-index:10;
+	vertical-align:middle;
+}
+
+.pagetext
+{
+	z-index:100;
+	position:absolute;
+	width:95%;
+	height:85%;
+	top:2em;
+}
+
+.pagetitle
+{
+	font-size:2em;
+	font-weight:bold;
+}
+
+#leftpage
+{
+	float:left;
+	background-size: 100%;
+}
+
+#leftpagetext
+{
+	right:0;
+}
+
+#rightpage
+{
+	float:right;
+}
+
+#profilepic
+{
+	max-width:30%;
+}
+
+#activity, #activity td, #activity th
+{
+	margin:0 auto;
+	border: 1px solid black;
+}
+
+#activity td, #activity th
+{
+	padding:5px;
+}

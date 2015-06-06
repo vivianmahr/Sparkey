@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vibe: MyString
+  user_id: 
+  post_id: 
+
+two:
+  vibe: MyString
+  user_id: 
+  post_id: 
