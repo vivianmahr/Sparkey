@@ -5,7 +5,8 @@ class UsersController < ApplicationController
 	end
 
 	def other_user
-		@user = current_user;
+		username = params.require(:username)
+		@user = User.find_by username: username;
 		render :template => 'users/user'
 	end
 end

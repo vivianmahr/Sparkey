@@ -33,7 +33,7 @@
 			</div>
 			<div class="nav navbar-nav navbar-right">
 				<div id="user-options">
-				    <a href="./profile.html" class="red-link"> <%= current_user.username %> </a>
+					<%= link_to current_user.username, user_path, :class=> "red-link" %>
 				    <span class="divider">|</span>
 				    <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "red-link") %>
 				</div>

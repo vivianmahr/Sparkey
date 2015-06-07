@@ -14,17 +14,16 @@
       {text: "Amet", weight: 5}
     ]
 </script>
-<%= @user.username %>
 <div class="container">
     <div id="profile">
 		<div id="leftpage" class="page">
 			<%= image_tag("leftPage.png", :alt => "leftPage", :class => "pageimage") %>
 			<div id="leftpagetext" class="pagetext">
 				<p>
-					<%= image_tag("Sparkey Logo Orange.png", :alt => "profile pic", :id => "profilepic") %>
+					<%= image_tag( @user.username + ".png", :alt => "profile pic", :id => "profilepic") %>
 				</p>
-				<p class="pagetitle"> <%= current_user.username %></p>
-				<p id="status"><%= current_user.about %></p>
+				<p class="pagetitle"> <%= @user.username %></p>
+				<p id="status"><%= @user.about %></p>
 				<table id="activity">
 					<tr>
 						<th></th>
