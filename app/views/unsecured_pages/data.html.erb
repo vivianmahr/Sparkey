@@ -2,6 +2,7 @@
   <tr>Post</tr>
   <% @posts.each do |elt|%>
     <tr>
+      <td><%= elt.id %></td>
       <td><%= elt.text_content %></td>
       <td><%= elt.image_path %></td>
       <td><%= elt.video_path %></td>
@@ -16,9 +17,9 @@
   <tr>User</tr>
   <% @users.each do |elt|%>
     <tr>
-      <td><%= elt.name %></td>
-      <td><%= elt.about %></td>
-      <td><%= elt.password %></td>
+      <td><%= elt.id %></td>
+      <td><%= elt.username %></td>
+      <td><%= elt.email %></td>
     </tr>
   <% end %>
 </table>
@@ -27,6 +28,7 @@
   <tr>Comment</tr>
   <% @comments.each do |elt|%>
     <tr>
+      <td><%= elt.id %></td>
       <td><%= elt.text_content %></td>
       <td><%= elt.author_name %></td>
       <td><%= elt.date_submitted %></td>
@@ -39,6 +41,7 @@
   <tr>Vibe</tr>
   <% @vibes.each do |elt|%>
     <tr>
+      <td><%= elt.id %></td>
       <td><%= elt.vibe %></td>
       <td><%= elt.user_id %></td>
       <td><%= elt.post_id %></td>

@@ -1,1 +1,42 @@
 <h1>you've come to the right place</h1>
+
+<table>
+  <tr>Post</tr>
+  <% @posts.each do |elt|%>
+    <tr>
+      <td><%= elt.id %></td>
+      <td><%= elt.text_content %></td>
+
+      <td><%= elt.image_path %></td>
+      <td><%= elt.video_path %></td>
+      <td><%= elt.spark_count %></td>
+      <td><%= elt.score %></td>
+      <td><%= elt.views %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br><table>
+  <tr>Vibe</tr>
+  <% @vibes.each do |elt|%>
+    <tr>
+      <td><%= elt.id %></td>
+      <td><%= elt.vibe %></td>
+      <td><%= elt.user_id %></td>
+      <td><%= elt.post_id %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br><table>
+  <tr>Posts with Vibes</tr>
+  
+  <% @posts_with_vibes.each do |elt|%>
+    <tr>
+      <td><%= elt.id %></td>
+      <td><%= elt.text_content %></td>
+      <td><%= elt.vibe %></td>
+      
+    </tr>
+  <% end %>
+</table>
