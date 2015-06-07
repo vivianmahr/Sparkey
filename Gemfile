@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '1.9.3', :engine => 'jruby', :engine_version => '1.7.16'
 
 gem 'puma'
 
@@ -51,5 +50,6 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
