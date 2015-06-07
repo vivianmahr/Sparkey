@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   # Use our own controller so that the sign up form also takes in a username field
   devise_for :users, :controllers => { registrations: 'registrations' }
 
+  # /post/id displays post with given id
+  get '/post/:id', to: 'posts#show', as: 'post'
+
   # unsecured_pages controller
   get '/data' => 'unsecured_pages#data'
 

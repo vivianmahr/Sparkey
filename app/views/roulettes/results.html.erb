@@ -1,5 +1,7 @@
 <h1>HERE ARE THE RESULTS</h1>
 
+<%= link_to 'TestPost', post_path(@test_post) %>
+
 <br><table>
   <tr>Checkbox values</tr>
  
@@ -11,4 +13,17 @@
     <tr>
     	<td><%= @vibes_list %></td>
     </tr>
+    <tr>
+    	Posts
+    </tr>
+    <% @results_asc.each do |elt| %>
+    <tr>
+    	<td>
+    		<%= elt.text_content %>
+    	</td>
+    	<td>
+    		<%= elt.views %>
+    	</td>
+    </tr>
+    <% end %>
 </table>
