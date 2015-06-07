@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   # users_controller
   get '/user' => 'users#user'
+  get '/profile/:username' => 'users#other_user'
 
   # roulettes_controller
   get '/results' => 'roulettes#results'
