@@ -66,4 +66,12 @@ ActiveRecord::Schema.define(version: 20150605023932) do
   add_index "vibes", ["post_id"], name: "index_vibes_on_post_id"
   add_index "vibes", ["user_id"], name: "index_vibes_on_user_id"
 
+  create_table "widgets", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "stock"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end

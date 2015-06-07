@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RoulettesControllerTest < ActionController::TestCase
+class WidgetTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
