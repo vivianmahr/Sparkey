@@ -1,1 +1,85 @@
-<h1>BROWSE STUFF</h1>
+<% provide(:title, "Browse") %>
+<% provide(:selected, ["browse"]) %>
+<% content_for :head do %>
+<% end %>
+
+<style>
+    .col-md-6 {
+        margin: auto;
+        text-align: center;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <h3 class="big-text black">
+                Browse
+            </h3>
+            <div class="browse-item">
+                <a href="link-to-the-post">
+                    <%= image_tag("Sparkey Logo Orange.png") %>
+                    <div class="item-info">
+                        <table class="item-table">
+                            <tr>
+                                <td class="icon"><span class="glyphicon glyphicon-picture"></span></td>
+                                <td>Cool</td>
+                                <td>Sharp</td>
+                                <td>Glass</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>    
+            </div>
+            <div class="browse-item">
+                <a href="./~browse_text_example.html">
+                    <img src="./images/text.jpg"/>
+                    <div class="item-info">
+                        <table class="item-table">
+                            <tr>
+                                <td class="icon"><span class="glyphicon glyphicon-text-background"></span></td>
+                                <td>People</td>
+                                <td>Long</td>
+                                <td>Creepy</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+            </div>
+            <div class="browse-item">
+                <a href="./~browse_image_example1.html">
+                    <img src="./images/Laevatain.jpg"/>
+                    <div class="item-info">
+                        <table class="item-table">
+                            <tr>
+                                <td class="icon"><span class="glyphicon glyphicon-picture"></span></td>
+                                <td>Fiery</td>
+                                <td>Sharp</td>
+                                <td>Dragon</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+            </div>
+            <div class="browse-item">
+                <a href="./~browse_video_example.html">
+                    <img src="./images/vid_thumbnail.jpg"/>
+                    <div class="item-info">
+                        <table class="item-table">
+                            <tr>
+                                <td class="icon"><span class="glyphicon glyphicon-play-circle"></span></td>
+                                <td>Cat</td>
+                                <td>Glomp</td>
+                                <td>Fight</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>

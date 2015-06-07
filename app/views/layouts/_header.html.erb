@@ -19,7 +19,7 @@
 		    			<li><%= link_to 'Roulette', roulette_path %> </li>
 				    	<% if selected.include? "browse"%>
 					    	<li class="active"><%= link_to 'Browse', browse_path %></li>
-					    	<li><%= link_to 'Search', search_path %></li>
+					    	<li><%= link_to 'Submit', submit_path %></li>
 					  	<% else %>
 				  			<li><%= link_to 'Browse', browse_path %></li>
 					  		<% if selected.include? "submit"%>

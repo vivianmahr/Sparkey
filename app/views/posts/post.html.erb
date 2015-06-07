@@ -1,1 +1,6 @@
-<h1>you've come to the right place</h1>
+<% provide(:title, "GET THE TITLE OF THE IMAGE") %>
+<% provide(:selected, []) %>
+<% content_for :head do %>
+	<%= javascript_include_tag "search.js" %>
+<% end %>
+
