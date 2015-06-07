@@ -555,7 +555,8 @@ video {
 #cloud {
     width: 25rem;
     height: 28rem;
-    margin: auto;
+    margin: auto;    
+    overflow: visible;
 }
 #cloud span {
     color: #4F2601;
