@@ -4,9 +4,8 @@
 		<title>
 			<%= yield(:title) %>
 		</title>
-		<%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-		<%= stylesheet_link_tag "bootstrap.min.css", "bootstrap-theme.min.css", "default.css" %>
-        <%= javascript_include_tag "jquery-2.1.1.js", "bootstrap.min.js" %>
+		<%= stylesheet_link_tag "bootstrap.min.css", "bootstrap-theme.min.css", "application", "default.css"  %>
+        <%= javascript_include_tag "jquery-2.1.1.js", "bootstrap.min.js", "application" %>
 		<%= csrf_meta_tags %>
 		<%= yield :head %>
 	</head>

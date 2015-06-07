@@ -12,20 +12,20 @@
 				<ul class="nav navbar-nav navbar-center">
 					<% selected = yield(:selected) %>
 					<% if selected.include? "roulette" %>
-					    <li class="active"><a href="./roulette_config.html">Roulette</a></li>
-					    <li><a href="./browse.html">Browse</a></li>
-				    	<li><a href="./submit.html">Submit</a></li>
+					    <li class="active"><%= link_to 'Roulette', roulette_path %></li>
+					    <li><%= link_to 'Browse', browse_path %></li>
+				    	<li><%= link_to 'Submit', submit_path %></li>
 			    	<% else %>
-		    			<li><a href="./roulette_config.html">Roulette</a></li>
+		    			<li><%= link_to 'Roulette', roulette_path %> </li>
 				    	<% if selected.include? "browse"%>
-					    	<li class="active"><a href="./browse.html">Browse</a></li>
-					    	<li><a href="./submit.html">Submit</a></li>
+					    	<li class="active"><%= link_to 'Browse', browse_path %></li>
+					    	<li><%= link_to 'Submit', submit_path %></li>
 					  	<% else %>
-				  			<li><a href="./browse.html">Browse</a></li>
+				  			<li><%= link_to 'Browse', browse_path %></li>
 					  		<% if selected.include? "submit"%>
-				  				<li class="active"><a href="./submit.html">Submit</a></li>
+				  				<li class="active"><%= link_to 'Submit', submit_path %></li>
 			  				<% else %>
-		  						<li><a href="./submit.html">Submit</a></li>
+		  						<li><%= link_to 'Submit', submit_path %></li>
 			  				<% end %>
 						<% end %>
 					<% end %>

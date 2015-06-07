@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   # static_pages_controller
   get '/roulette' => 'static_pages#roulette'
   get '/submit' => 'static_pages#submit'
-  
+  get '/about' => 'static_pages#about'
 
   # posts_controller
   get '/post' => 'posts#post'

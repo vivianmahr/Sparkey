@@ -2,8 +2,18 @@
 <% provide(:selected, []) %>
 <% content_for :head do %>
 	<%= stylesheet_link_tag "profile.css" %>
+	<%= javascript_include_tag "generate_word_cloud" %>
 <% end %>
 
+<script>
+	var words = [
+      {text: "Lorem", weight: 15},
+      {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
+      {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
+      {text: "Sit", weight: 7},
+      {text: "Amet", weight: 5}
+    ]
+</script>
 <div class="container">
     <div id="profile">
 		<div id="leftpage" class="page">
@@ -60,9 +70,10 @@
 		</div>
 		<div id="rightpage" class="page">
 			<%= image_tag("rightPage.png", :alt => "rightPage", :class => "pageimage") %>
-			<div id="uservibes" class="pagetext">
+			<div id="vibes" class="pagetext">
 				<p class="pagetitle">Vibes</p>
-				<img class="pageimage" src="./images/Lassie Vampire Cloud Transparent.png">
+				<div id="cloud">
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1,11 +1,11 @@
 @font-face {
     font-family: Latine;
-    src: url("../fonts/Latine.ttf"); 
+    src: url('Latine.ttf');
 }
 
 html, body {
     background: #FEF1B5;
-    font-family: Latine, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: "Latine", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     height: 100%
 }
 
@@ -316,10 +316,13 @@ input[type=file]:hover  {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	-webkit-transform: translateY(-50%) translateX(-50%);
 	-webkit-filter: blur(10px);
 	filter: blur(10px);
 	z-index:1;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -o-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
 }
 
 .item-info{
@@ -333,8 +336,18 @@ input[type=file]:hover  {
 	margin-top:2em;
 	width:100%;
 	color:white;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: black;
+    font-weight: bold;
+	/*-webkit-text-stroke-width: 1px;*/
+	/*-webkit-text-stroke-color: black;*/
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
+.item-table::before{
+
 }
 
 .item-table td{
@@ -492,9 +505,13 @@ input[type=file]:hover  {
     position: absolute;
 	left: 50%;
 	top: 50%;
-	-webkit-transform: translateY(-50%) translateX(-50%);
-	-webkit-filter: blur(10px);
-	filter: blur(10px);
+    display: inline-block;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -o-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
 }
 
 .images a::before {
@@ -533,4 +550,15 @@ input[type=file]:hover  {
 
 video {
     width: 100%;
+}
+
+#cloud {
+    width: 25rem;
+    height: 28rem;
+    margin: auto;    
+    overflow: visible;
+}
+#cloud span {
+    color: #4F2601;
+    font-family: "Latine", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
