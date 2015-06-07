@@ -11,5 +11,6 @@
  * file per style scope.
  *= require bootstrap.scss
  *= require jqcloud
+ *= require_self
  */
 
