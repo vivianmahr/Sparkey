@@ -1,4 +1,4 @@
-class UnsecuredPagesController < ApplicationController
+class UnsecuredPagesController 
 	def splash
 
 	end

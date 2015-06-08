@@ -1,1 +1,49 @@
-<%= @id %>
+<table>
+  <tr>Post data</tr>
+  	<tr>
+  	<td>ID</td><td>Text</td><td>Sparks</td>
+  	</tr>
+    <tr>
+      <td><%= @post.id %></td>
+      <td><%= @post.text_content %></td>
+      <td><%= @post.spark_count %></td>
+    </tr>
+</table>
+<br>
+
+<table>
+	<tr>Vibes of post</tr>
+	<tr>
+		<td>Post ID</td><td>Vibe</td>
+	</tr>
+	<% @vibes.each do |v|%>
+		<tr>
+			<td>
+				<%= v.id %>
+			</td>
+			<td>
+	 			<%= v.vibe %>
+	 		</td>
+		</tr>
+	<% end %> 
+</table>
+
+<table>
+	<tr>Comments of post</tr>
+	<tr>
+		<td>Comment</td><td>Author</td><td>Post ID</td>
+	</tr>
+	<% @comments.each do |c|%>
+		<tr>
+			<td>
+				<%= c.text_content%>
+			</td>
+			<td>
+	 			<%= c.author_name %>
+	 		</td>
+	 		<td>
+	 			<%= c.post_id %>
+	 		</td>
+		</tr>
+	<% end %> 
+</table>

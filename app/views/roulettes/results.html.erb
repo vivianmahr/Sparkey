@@ -1,7 +1,33 @@
 <h1>HERE ARE THE RESULTS</h1>
 
 <%= link_to 'TestPost', post_path(@test_post) %>
+<h3> NUMBER OF CHECKBOXES CHECKED IS <%= @test_num %> </h3>
 
+<table>
+<tr>RESULTS</tr>
+	<tr>
+      	<td> Post ID </td>
+      	<td> Text </td>
+      	<td> Video path </td>
+      	<td> Image path </td>
+    </tr>
+	<% @result_posts.each do |elt| %>
+    <tr>
+    	<td>
+    		<%= elt.id %>
+    	</td>
+    	<td>
+    		<%= elt.text_content %>
+    	</td>
+    	<td>
+    		<%= elt.video_path %>
+    	</td>
+    	<td>
+    		<%= elt.image_path %>
+    	</td>
+    </tr>
+    <% end %>
+</table>
 <br><table>
   <tr>Checkbox values</tr>
  

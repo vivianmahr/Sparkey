@@ -1,0 +1,55 @@
+<% provide(:title, "Sparkey") %>
+<% content_for :head do %>
+<% end %>
+
+<div class="container vertical-align">
+    <div class="row vertical-align">   
+        <div id="splash_text" class="col-md-5 vertical-align">
+            <div class="black">
+                <p class="big-text">
+                    Fed up with your art being <span class="dark-red bold">buried </span> and never getting seen?
+                </p>
+                <p class="big-text">
+                    Tired of your voice echoing in an <span class="dark-red bold">empty stadium</span>? </br>
+                </p>
+                <p class="big-text">
+                    Join a community whose goal is to <span class="dark-red bold">help</span> each other be heard and where stray <span class="dark-red bold">sparks</span> start <span class="dark-red bold">wildfires</span>! </br>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-container">
+                <h3 >
+                    Sign up!
+                </h3>
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                    <%= devise_error_messages! %>
+                     
+                        <%= f.email_field :email, autofocus: true, :placeholder => "email", :class => "long" %>
+                      
+                        <div class="clearer">&nbsp;</div> 
+                        <%= f.text_field :username, autocomplete: "off", :placeholder => "username", :class => "long" %>
+                        <div class="clearer">&nbsp;</div>
+
+                        <% if @minimum_password_length %>
+                        <em>(<%= @minimum_password_length %> characters minimum)</em>
+                        <% end %>
+                        <%= f.password_field :password, autocomplete: "off", :placeholder => "password", :class => "long" %>
+                        <div class="clearer">&nbsp;</div>                    
+                      
+                        <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => "confirm password", :class => "long" %>
+                        <div class="clearer">&nbsp;</div>
+
+                        <div class="actions">
+                            <%= f.submit "Sign up" %>
+                        </div>
+                        <div class="clearer">&nbsp;</div>
+                <% end %>
+            </div>
+            
+        </div>
+    </div>
+</div>
