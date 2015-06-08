@@ -22,6 +22,7 @@ default: &default
 
 development:
   <<: *default
+  adapter: sqlite3
   database: db/development.sqlite3
 
   # The specified database role being used to connect to postgres.
@@ -81,6 +82,6 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: ruby-getting-started_production
-  username: ruby-getting-started
-  password: <%= ENV['RUBY-GETTING-STARTED_DATABASE_PASSWORD'] %>
+  database: vivian_development
+  url: <%= ENV['DATABASE_URL'] %>
+

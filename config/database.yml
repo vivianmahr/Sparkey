@@ -82,6 +82,5 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: ruby-getting-started_production
-  username: ruby-getting-started
-  password: <%= ENV['RUBY-GETTING-STARTED_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
