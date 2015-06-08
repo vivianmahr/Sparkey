@@ -32,9 +32,6 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'puma'
-group :development, :test do
-  gem 'sqlite3',     '1.3.9'
-end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
