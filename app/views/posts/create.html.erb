@@ -1,6 +1,7 @@
 <style>
     img{
         width:50%;
+
     }
 
     #submitContainer{
@@ -12,13 +13,14 @@
 <h1>Submitted</h1>
 
 <p>
-<%= params.inspect %>
+<h1><%= @title %></h1>
 </p>
-<br/>
-<br/>
+
 <p>
-
 <%= image_tag "/uploads/#{@uploaded_io.original_filename}" %>
+</p>
 
+<p>
+<h2><%= @description %></h2>
 </p>
 </div>

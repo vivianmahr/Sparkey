@@ -9,8 +9,8 @@ class PostsController < ApplicationController
 	  File.open(Rails.root.join('public', 'uploads', @uploaded_io.original_filename), 'wb') do |file|
 	    file.write(@uploaded_io.read)
 
-	  @title = params[:title]
-	  @description = params[:text_content] 
+	  @title = params[:posts][:title]
+	  @description = params[:posts][:text] 
 	  end
 	end
 	def post
