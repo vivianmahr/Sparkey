@@ -1,26 +1,98 @@
-<style>
-    img{
-        width:50%;
-
-    }
-
-    #submitContainer{
-        text-align: center;
-    }
-</style>
-
-<div id="submitContainer">
-<h1>Submitted</h1>
-
-<p>
-<h1><%= @title %></h1>
-</p>
-
-<p>
-<%= image_tag "/uploads/#{@uploaded_io.original_filename}" %>
-</p>
-
-<p>
-<h2><%= @description %></h2>
-</p>
-</div>
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="/../app/assets/stylesheets/bootstrap.min.css">
+        <link rel="stylesheet" href="/../app/assets/stylesheets/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/../app/assets/stylesheets/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/../app/assets/stylesheets/default.css">
+        <script src="./js/jquery-2.1.1.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/search.js"></script>
+        <style>
+            .col-md-5 {
+                float: none;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .col-md-5 div {
+                width: 100%;
+            }
+            #roulette-box {
+                border-top: none;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+            #image-box img {
+            	width: 100%;
+            }
+        </style>
+    </header>
+    <body>
+        <div id="wrap">
+           
+            <div class="container">
+                <div class="clearer">&nbsp;</div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <h3>
+                            <%= @title %>
+                        </h3>
+                        <div id="image-box">
+                            <%= image_tag "/uploads/#{@uploaded_io.original_filename}" %>
+                        </div>
+                        <div class="clearer">&nbsp;</div>
+                        <div class="desc-box black">
+                            <p>
+                                <%= @description %>
+                            </p>
+                        </div>
+                        <div class="clearer">&nbsp;</div>
+                        <p>
+                            Give it a 
+                            <input type="submit" value="Spark!">
+                        </p>
+                            <div class="clearer">&nbsp;</div>
+                        <div id="vibe-tab" class="tab">Vibes</div>
+                        <div id="comment-tab" class="tab unselected">Comments</div>
+                        <div class="clearer"></div>
+                        <div class="form-container" id="roulette-box">
+                            <div class="clearer">&nbsp;</div>
+                            <div class="clearer">&nbsp;</div>
+                            <div id="vibe-box">
+                                <img src="./images/placeholder_roulette.png"/>
+                                <div class="clearer">&nbsp;</div>
+                                <form>
+                                    <textarea class="long" placeholder="Enter vibes"></textarea>
+                                    <div class="clearer">&nbsp;</div>
+                                    <input type="submit" value='Submit'/>
+                                    <div class="clearer">&nbsp;</div>
+                                </form>
+                            </div>
+                            <div id="comment-box" class="hidden">
+                                <form>
+                                    <textarea class="long" placeholder="Enter a comment"></textarea>
+                                    <div class="clearer">&nbsp;</div>
+                                    <input type="submit" value='Submit'/>
+                                    <div class="clearer">&nbsp;</div>
+                                </form>
+                                <ul id="comments">
+                                    <li class="comment">
+                                        <a class="red-link" href="./~profile-vvvvvvitellary.html">
+                                            <h4>
+                                                vvvvvvitellary
+                                            </h4>
+                                        </a>
+                                        <p>
+                                            Should have stayed away from the pinkish hues on the hilt and handle - makes it look more like a strawberry than a flaming sword.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clearer">&nbsp;</div>
+                        <div class="clearer">&nbsp;</div>
+                    </div>
+                </div>
+        </div>
+    </body>
+</html> 
