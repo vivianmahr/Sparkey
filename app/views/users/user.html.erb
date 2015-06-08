@@ -14,7 +14,19 @@
 				</p>
 				<p class="pagetitle"> <%= current_user.username %></p>
 				<p id="status"><%= current_user.about %></p>
-				<table id="activity">
+				<%= form_for :user, url: user_update_path do |f| %>
+					<p>
+						<%= f.file_field :picture %>
+					</p>
+					<p>
+						<%= f.text_field :status, :placeholder => 'Update your status:' %>
+					</p>
+
+					<p>
+					<%= f.submit "Submit" %>
+					</p>
+				<% end %>
+				<!-- <table id="activity">
 					<tr>
 						<th></th>
 						<th>M</th>
@@ -34,8 +46,8 @@
 						<td></td>
 						<td></td>
 						<td></td>
-					</tr>
-					<tr>
+					</tr> -->
+					<!-- <tr>
 						<td>Comments</td>
 						<td></td>
 						<td></td>
@@ -55,7 +67,7 @@
 						<td></td>
 						<td></td>
 					</tr>
-				</table>
+				</table> -->
 			</div>
 		</div>
 		<div id="rightpage" class="page">

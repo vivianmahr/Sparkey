@@ -24,6 +24,7 @@ Rails.application.routes.draw do
 
   # users_controller
   get '/user' => 'users#user'
+  post '/user_update' => 'users#update'
 
   # roulettes_controller
   get '/results' => 'roulettes#results'

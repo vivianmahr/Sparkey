@@ -21,6 +21,8 @@
           <%= f.email_field :email, autofocus: true %>
         </div>
 
+         <%= f.text_field :name, :placeholder => "username"%>
+
         <div class="field">
           <%= f.label :password %>
           <% if @minimum_password_length %>
