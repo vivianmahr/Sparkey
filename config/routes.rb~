@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   # posts_controller
   get '/post' => 'posts#post'
   get '/browse' => 'posts#browse'
-  get '/submit' => 'posts#new'
+  get '/submit' => 'posts#create'
 
   # users_controller
   get '/user' => 'users#user'

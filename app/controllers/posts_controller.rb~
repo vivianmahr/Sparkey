@@ -1,16 +1,12 @@
 class PostsController < ApplicationController
 	def new
-		@post = Post.new
 	end
-	
 	def create
-	  @uploaded_io = params[:posts][:picture]
-
-	  File.open(Rails.root.join('public', 'uploads', @uploaded_io.original_filename), 'wb') do |file|
-	    file.write(@uploaded_io.read)
-
-	  @title = params[:title]
-	  @description = params[:text_content] 
+	end
+	def upload
+	  uploaded_io = params[:submit][:picture]
+	  File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+	    file.write(uploaded_io.read)
 	  end
 	end
 	def post

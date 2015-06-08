@@ -1,0 +1,60 @@
+<% provide(:title, "Submit") %>
+<% provide(:selected, ["submit"]) %>
+<% content_for :head do %>
+<% end %>
+
+
+<style>
+    .col-md-5 {
+        float: none;
+        margin: 0 auto;
+    }
+    input[type=file]::before {
+        content: "Drag a file in here or";
+        top: 4rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+        position: absolute;
+    }
+    input[type=file] {
+        padding-left: 15%;
+        width: 90%;
+        height: auto;
+        padding-bottom: 6rem;
+    }
+    input[type=text], textarea{
+        width: 90% !important;
+    }
+
+</style>
+    <div class="container">
+        <div class="clearer">&nbsp;</div>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-container">
+                    <h3>
+                        Submit
+                    </h3>
+                    <%= form_for :posts, url: posts_path do |f| %>
+					<p>
+						<%= f.text_field :title, :placeholder => 'title', :required => 'required' %>
+					</p>
+					<p>
+						<%= f.file_field :picture, :required => 'required'%>
+					</p>
+					<p>
+						<%= f.text_area :text, :placeholder => 'Write a description...' %>
+					</p>
+
+					<p>
+					<%= f.submit "Submit" %>
+					</p>
+				<% end %>
+                </div>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+        <div class="clearer">&nbsp;</div>
+    </div>

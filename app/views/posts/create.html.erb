@@ -1,0 +1,24 @@
+<style>
+    img{
+        width:50%;
+    }
+
+    #submitContainer{
+        text-align: center;
+    }
+</style>
+
+<div id="submitContainer">
+<h1>Submitted</h1>
+
+<p>
+<%= params.inspect %>
+</p>
+<br/>
+<br/>
+<p>
+
+<%= image_tag "/uploads/#{@uploaded_io.original_filename}" %>
+
+</p>
+</div>
