@@ -87,10 +87,3 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
-
-
-
-p = Post.new
-p.title = @title
-...
-p.save
