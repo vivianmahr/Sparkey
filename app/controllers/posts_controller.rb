@@ -1,4 +1,18 @@
 class PostsController < ApplicationController
+	def new
+		@post = Post.new
+	end
+	
+	def create
+	  @uploaded_io = params[:posts][:picture]
+
+	  File.open(Rails.root.join('public', 'uploads', @uploaded_io.original_filename), 'wb') do |file|
+	    file.write(@uploaded_io.read)
+
+	  @title = params[:posts][:title]
+	  @description = params[:posts][:text] 
+	  end
+	end
 	def post
 		@posts = Post.all
 		@vibes = Vibe.all

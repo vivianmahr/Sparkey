@@ -12,15 +12,13 @@ Rails.application.routes.draw do
 
   # static_pages_controller
   get '/roulette' => 'static_pages#roulette'
-
   #get '/submit' => 'static_pages#submit'
   get '/about' => 'static_pages#about'
-
 
   # posts_controller
   get '/post' => 'posts#post'
   get '/browse' => 'posts#browse'
-  get '/submit' => 'posts#new'
+  get '/submit' => 'posts#create'
 
   # users_controller
   get '/user' => 'users#user'
@@ -87,10 +85,3 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
-
-
-
-p = Post.new
-p.title = @title
-...
-p.save

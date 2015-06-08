@@ -1,0 +1,26 @@
+<style>
+    img{
+        width:50%;
+
+    }
+
+    #submitContainer{
+        text-align: center;
+    }
+</style>
+
+<div id="submitContainer">
+<h1>Submitted</h1>
+
+<p>
+<h1><%= @title %></h1>
+</p>
+
+<p>
+<%= image_tag "/uploads/#{@uploaded_io.original_filename}" %>
+</p>
+
+<p>
+<h2><%= @description %></h2>
+</p>
+</div>
