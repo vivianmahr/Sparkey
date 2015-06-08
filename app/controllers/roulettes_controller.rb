@@ -1,20 +1,45 @@
 class RoulettesController < ApplicationController
 	
 	def results
-		# Each variable is either nil or 1, where nil is unchecked and 
-		# 1 is checked
-		@text_val = params[:text]
-		@images_val = params[:images]
-		@video_val = params[:video]
-		
+
 		# Creates an array of vibes 
-		@vibes_list = params[:vibes]
-		@vibes_list = @vibes_list.gsub(" ", "")
-		@vibes_list = @vibes_list.split(",")
+		vibes_string_list = params[:vibes]
+		vibes_string_list = vibes_string_list.gsub(" ", "")
+		vibes_list = vibes_string_list.split(",")
+		
+		
 
-		# Variable for parameter testing
-		@test_post = Post.find(14)
+		
 
-		@results_asc = Post.order(views: :asc)
+		# Depending on if user entered vibes, return results
+		# 	1. If there are one or more vibes, do vibes_search
+		# 	2. Else, do default search
+		num_posts = 10
+		legit_vibes = []
+		results_list = Hash.new
+		vibes_list.each do |vibe|
+			legit_vibes += Vibe.where(:vibe => vibe)
+		end
+		post = []
+		if(vibes_list.size == 1)
+			post = Post.where(:id => legit_vibes[0])
+		elsif(vibes_list.size > 1)
+			legit_vibes.each do |vibe|
+				post += Post.where(:id => vibe)
+			end
+		else		
+			post = Post.order(views: :asc, created_at: :asc).limit(num_posts)
+		end
+
+		post.each do |p|
+			p_vibes = Vibe.where(:post_id => p.id)
+			results_list[p] = p_vibes
+		end
+
+		@final_results_list = results_list
+
+
+
+		
 	end
 end

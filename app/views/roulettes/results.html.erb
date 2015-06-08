@@ -1,34 +1,21 @@
-<<<<<<< HEAD
-<h1>HERE ARE THE RESULTS</h1>
-
-<%= link_to 'TestPost', post_path(@test_post) %>
-
-<br><table>
-  <tr>Checkbox values</tr>
- 
+<table>
+<tr>
+    <td>Post ID</td><td>Text</td><td>Vibes</td>
+</tr>
+    <% @final_results_list.each do |post, vibes_list| %>
     <tr>
-      	<td><%= @text_val %></td>
-      	<td><%= @images_val %></td>
-      	<td><%= @video_val %></td>
-    </tr>
-    <tr>
-    	<td><%= @vibes_list %></td>
-    </tr>
-    <tr>
-    	Posts
-    </tr>
-    <% @results_asc.each do |elt| %>
-    <tr>
-    	<td>
-    		<%= elt.text_content %>
-    	</td>
-    	<td>
-    		<%= elt.views %>
-    	</td>
+        <td><%= post.id %></td>
+        <td><%= post.text_content %></td>
+        <td>
+                <% vibes_list.each do |vibe| %>
+                <%= vibe.vibe %>,
+                <% end %>
+        </td>
     </tr>
     <% end %>
 </table>
-=======
+
+
 <% provide(:title, "Roulette results") %>
 <% provide(:selected, ["roulette"]) %>
 <% content_for :head do %>
@@ -163,4 +150,4 @@
     </div>
     <span class="glyphicon glyphicon-step-forward"></span>
 </div>
->>>>>>> 6d5ca06fba96bd353063508b98ec0304bef63915
+
