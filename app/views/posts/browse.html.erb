@@ -34,12 +34,17 @@
             <div class="browse-item">
                 <%= link_to posts_path + "/" + post[:id].to_s do %>
                     <%= image_tag(post.image_path) %>
+                    <% if (vibes.size - 1) < 2 %> 
+                        <% iterate_to = (vibes.size - 1) %>
+                    <% else %>
+                        <% iterate_to = 2 %>
+                    <% end %>
                     <div class="item-info">
                         <table class="item-table">
                             <tr>
                                 <td class="icon"><span class="glyphicon glyphicon-picture"></span></td>
                                
-                                    <% for i in 0..(vibes.size - 1) %>
+                                    <% for i in 0..iterate_to %>
                                         <td><%= vibes[i][:vibe] %></td>
                                     <%  end %>
                             </tr>
