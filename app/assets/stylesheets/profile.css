@@ -54,6 +54,7 @@
 #profilepic
 {
 	max-width:30%;
+	max-height:30%;
 }
 
 #activity, #activity td, #activity th
@@ -69,7 +70,7 @@
 
 input[type=file]::before 
 {
-    content: "Choose a new profile picture:";
+    content: "Upload profile picture (.PNG):";
     top: 0.3rem;
     left: 0;
     right: 0;
@@ -88,4 +89,15 @@ input[type=file]
 input[type=text] 
 {
     width: 80% !important;
+}
+
+#status {
+	word-wrap: break-word;
+	text-wrap: wrap;
+	max-height: 4rem;
+	overflow-y: scroll;
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 0.5rem;
 }

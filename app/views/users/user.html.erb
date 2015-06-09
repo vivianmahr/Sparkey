@@ -9,9 +9,9 @@
 		<div id="leftpage" class="page">
 			<%= image_tag("leftPage.png", :alt => "leftPage", :class => "pageimage") %>
 			<div id="leftpagetext" class="pagetext">
-				<p>
-					<%= image_tag("Sparkey Logo Orange.png", :alt => "profile pic", :id => "profilepic") %>
-				</p>
+				
+					<%= image_tag("/profilepictures/#{current_user[:username]}.png", :alt => "profile pic", :id => "profilepic") %>
+				<br/>
 				<p class="pagetitle"> <%= current_user.username %></p>
 				<p id="status"><%= current_user.about %></p>
 				<%= form_for :user, url: user_update_path do |f| %>
