@@ -58,7 +58,7 @@ class PostsController < ApplicationController
 	    file.write(@uploaded_io.read)
 	  end
 	  #render plain: @post
-	  @post[:image_path] = "/uploads/" + @uploaded_io.original_filename
+	  @post[:image_path] = "/../uploads/" + @uploaded_io.original_filename
 	  @post[:spark_count] = 0
 	  @post[:description] = params[:posts][:text] 
 	  @post[:views] = 0

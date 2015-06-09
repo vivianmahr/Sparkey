@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 		render :template => 'users/user'
 	end
 
-		def update
+	def update
 		begin
 			@uploaded_io = params[:user][:picture]
 	    	to_array = @uploaded_io.original_filename.lines(".")
