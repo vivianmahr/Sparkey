@@ -40,7 +40,7 @@ class PostsController < ApplicationController
 
 	def browse
 		results_list = Hash.new
-		posts = Post.order(views: :asc, created_at: :asc).limit(15)
+		posts = Post.order(spark_count: :desc).limit(15)
 		posts.each do |p|
 			p_vibes = Vibe.where(:post_id => p.id)
 			results_list[p] = p_vibes
