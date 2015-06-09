@@ -18,66 +18,23 @@
             <h3 class="big-text black">
                 Browse
             </h3>
+            <% @final_results_list.each do |post, vibes| %>
             <div class="browse-item">
-                <a href="link-to-the-post">
-                    <%= image_tag("Sparkey Logo Orange.png") %>
+                <%= link_to posts_path + "/" + post[:id].to_s do %>
+                    <%= image_tag(post.image_path) %>
                     <div class="item-info">
                         <table class="item-table">
                             <tr>
                                 <td class="icon"><span class="glyphicon glyphicon-picture"></span></td>
-                                <td>Cool</td>
-                                <td>Sharp</td>
-                                <td>Glass</td>
+                                <% for i in (vibes.size - 3)..(vibes.size - 1) %>
+                                    <td><%= vibes[i][:vibe] %></td>
+                                <% end %>
                             </tr>
                         </table>
                     </div>
-                </a>    
+                <% end %> 
             </div>
-            <div class="browse-item">
-                <a href="./~browse_text_example.html">
-                    <%= image_tag("Sparkey Logo Orange.png") %>
-                    <div class="item-info">
-                        <table class="item-table">
-                            <tr>
-                                <td class="icon"><span class="glyphicon glyphicon-text-background"></span></td>
-                                <td>People</td>
-                                <td>Long</td>
-                                <td>Creepy</td>
-                            </tr>
-                        </table>
-                    </div>
-                </a>
-            </div>
-            <div class="browse-item">
-                <a href="./~browse_image_example1.html">
-                    <%= image_tag("Sparkey Logo Orange.png") %>
-                    <div class="item-info">
-                        <table class="item-table">
-                            <tr>
-                                <td class="icon"><span class="glyphicon glyphicon-picture"></span></td>
-                                <td>Fiery</td>
-                                <td>Sharp</td>
-                                <td>Dragon</td>
-                            </tr>
-                        </table>
-                    </div>
-                </a>
-            </div>
-            <div class="browse-item">
-                <a href="./~browse_video_example.html">
-                    <%= image_tag("Sparkey Logo Orange.png") %>
-                    <div class="item-info">
-                        <table class="item-table">
-                            <tr>
-                                <td class="icon"><span class="glyphicon glyphicon-play-circle"></span></td>
-                                <td>Cat</td>
-                                <td>Glomp</td>
-                                <td>Fight</td>
-                            </tr>
-                        </table>
-                    </div>
-                </a>
-            </div>
+            <% end %>
         </div>
         <div class="col-md-3">
         </div>
