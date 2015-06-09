@@ -16,15 +16,14 @@
     }
 </style>
 
-<%
-    @over_three_vibes_found = false
-    @final_results_list.each do |post, vibes|
-        if vibes.size >= 3
-            @over_three_vibes_found = true
-        end
-        break
-    end
-%>
+<% @over_three_vibes_found = false %>
+    <% @final_results_list.each do |post, vibes| %>
+       <%  if vibes.size >= 3 %>
+          <%   @over_three_vibes_found = true %>
+        <% end %>
+        <% break %>
+    <% end %>
+
 
 <div class="container">
     <div class="row">
@@ -49,11 +48,12 @@
                                 <% if @over_three_vibes_found == true %>
                                     <% for i in (vibes.size - 3)..(vibes.size - 1) %>
                                         <td><%= vibes[i][:vibe] %></td>
-                                <% else 
-                                        for i in 0..2 %>
+                                    <% end %>
+                                <% else %>
+                                    <% for i in 0..(vibes.size - 1) %>
                                         <td><%= vibes[i][:vibe] %></td>
-                                    <%  end
-                                    end %>
+                                    <%  end %>
+                                <% end %>
                             </tr>
                         </table>
                     </div>
