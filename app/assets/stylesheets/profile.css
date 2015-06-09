@@ -54,6 +54,7 @@
 #profilepic
 {
 	max-width:30%;
+	max-height:30%;
 }
 
 #activity, #activity td, #activity th
@@ -65,4 +66,38 @@
 #activity td, #activity th
 {
 	padding:5px;
+}
+
+input[type=file]::before 
+{
+    content: "Upload profile picture (.PNG):";
+    top: 0.3rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: absolute;
+}
+
+input[type=file] 
+{
+    padding-left: 15%;
+    width: 80%;
+    height: 6rem;
+    padding-top: 2.3rem;
+}
+
+input[type=text] 
+{
+    width: 80% !important;
+}
+
+#status {
+	word-wrap: break-word;
+	text-wrap: wrap;
+	max-height: 4rem;
+	overflow-y: scroll;
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 0.5rem;
 }

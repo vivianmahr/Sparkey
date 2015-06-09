@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   # users_controller
   get '/user' => 'users#user'
   get '/profile/:username' => 'users#other_user'
+  post '/user_update' => 'users#update'
 
   # roulettes_controller
   get '/results' => 'roulettes#results'

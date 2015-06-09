@@ -14,59 +14,30 @@
       {text: "Amet", weight: 5}
     ]
 </script>
+
 <div class="container">
     <div id="profile">
 		<div id="leftpage" class="page">
 			<%= image_tag("leftPage.png", :alt => "leftPage", :class => "pageimage") %>
 			<div id="leftpagetext" class="pagetext">
-				<p>
-					<%= image_tag( @user.username + ".png", :alt => "profile pic", :id => "profilepic") %>
-				</p>
+			<%= image_tag("/profilepictures/#{@user[:username]}.png", :alt => "Upload a profile pic!", :id => "profilepic") %>
 				<p class="pagetitle"> <%= @user.username %></p>
 				<p id="status"><%= @user.about %></p>
-				<table id="activity">
-					<tr>
-						<th></th>
-						<th>M</th>
-						<th>T</th>
-						<th>W</th>
-						<th>Th</th>
-						<th>F</th>
-						<th>S</th>
-						<th>Su</th>
-					</tr>
-					<tr>
-						<td>Uploads</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Comments</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Vibes</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-				</table>
-			</div>
+		<% if current_user[:id] == @user[:id] %>
+			<%= form_for :user, url: user_update_path do |f| %>
+				<p>
+					<%= f.file_field :picture %>
+				</p>
+				<p>
+					<%= f.text_field :about, :placeholder => 'Update your status:' %>
+				</p>
+
+				<p>
+				<%= f.submit "Submit" %>
+				</p>
+			<% end %>
+		<% end %>
+					</div>
 		</div>
 		<div id="rightpage" class="page">
 			<%= image_tag("rightPage.png", :alt => "rightPage", :class => "pageimage") %>
