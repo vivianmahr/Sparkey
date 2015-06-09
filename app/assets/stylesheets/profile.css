@@ -68,7 +68,7 @@
 	padding:5px;
 }
 
-input[type=file]::before 
+input[type=file]::before
 {
     content: "Upload profile picture (.PNG):";
     top: 0.3rem;
@@ -86,6 +86,26 @@ input[type=file]
     padding-top: 2.3rem;
 }
 
+@-moz-document url-prefix() {
+	#profilePic:before
+	{
+		content: "Upload profile picture (.PNG):";
+		padding-top: 0.5rem;
+	    left: 0;
+	    right: 0;
+	    text-align: center;
+	    vertical-align: bottom;
+	    position: absolute;
+	}
+
+	#user_picture
+	{
+		padding: 2rem 0 1rem;
+		height: 50%;
+
+	}
+}
+
 input[type=text] 
 {
     width: 80% !important;
@@ -101,3 +121,5 @@ input[type=text]
 	margin: auto;
 	margin-bottom: 0.5rem;
 }
+
+
