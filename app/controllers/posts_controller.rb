@@ -6,7 +6,8 @@ class PostsController < ApplicationController
 	def show
 		@id = params[:id]
 		@post = Post.find(@id)
-		
+		@post.views += 1
+		@post.save
 		# User inputted vibes
 		vibes_string_list = params[:vibes]
 
