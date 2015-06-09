@@ -8,10 +8,6 @@ class RoulettesController < ApplicationController
 		vibes_string_list = vibes_string_list.rstrip.lstrip
 		vibes_string_list = vibes_string_list.gsub(" ", "")
 		vibes_list = vibes_string_list.split(",")
-		
-		
-
-		
 
 		# Depending on if user entered vibes, return results
 		# 	1. If there are one or more vibes, do vibes_search
@@ -24,7 +20,10 @@ class RoulettesController < ApplicationController
 		end
 		post = []
 		if(vibes_list.size == 1)
-			post = Post.where(:id => legit_vibes[0].post_id)
+			legit_vibes.each do |vibe|
+				post += Post.where(:id => vibe.post_id)
+			end
+			#post = Post.where(:id => legit_vibes[0].post_id)
 		elsif(vibes_list.size > 1)
 			legit_vibes.each do |vibe|
 				post += Post.where(:id => vibe.post_id)

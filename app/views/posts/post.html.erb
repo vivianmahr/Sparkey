@@ -53,7 +53,10 @@
             <div class="clearer">&nbsp;</div>
             <p>
                 Give it a 
-                <input type="submit" value="Spark!">
+                <%= form_tag({controller: "posts", action: "inc_spark_count"}, method: "post") do %>
+                    <%= hidden_field_tag :id , @post[:id] %>
+                    <%= submit_tag("Spark!") %>
+                <% end %>
             </p>
                 <div class="clearer">&nbsp;</div>
             <div id="vibe-tab" class="tab">Vibes</div>

@@ -70,4 +70,11 @@ class PostsController < ApplicationController
 	  redirect_to '/post/' + @post[:id].to_s
 	  #should have redirec to post/id#
 	end
+
+	def inc_spark_count
+		post = Post.find(params[:id])
+		post.spark_count += 1
+		post.save
+		redirect_to '/post/' + post[:id].to_s
+	end
 end

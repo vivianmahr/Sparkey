@@ -18,6 +18,7 @@ Rails.application.routes.draw do
  
   # posts_controller
   get '/browse' => 'posts#browse'
+  post '/inc_spark_count/:id' => 'posts#inc_spark_count'
 
   # users_controller
   get '/user' => 'users#user'
