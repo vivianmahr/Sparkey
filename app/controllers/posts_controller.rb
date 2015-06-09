@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
-	def post
-		
+
+	def new
 	end
+
 	def show
 		@id = params[:id]
 		@post = Post.find(@id)
@@ -18,10 +19,12 @@ class PostsController < ApplicationController
 				new_vibe.post_id = @id
 				new_vibe.save
 			end
-
-			redirect_to @post
+			#redirect_to @post
 		end
+		render :template => 'posts/post'
 	end
+
+
 	def browse
 		results_list = Hash.new
 		posts = Post.order(views: :asc, created_at: :asc).limit(15)
@@ -31,5 +34,25 @@ class PostsController < ApplicationController
 		end
 
 		@final_results_list = results_list
+	end
+
+
+	def create
+	  @post = Post.new
+	  @uploaded_io = params[:posts][:picture]
+
+	  File.open(Rails.root.join('public', 'uploads', @uploaded_io.original_filename), 'wb') do |file|
+	    file.write(@uploaded_io.read)
+	  end
+	  #render plain: @post
+	  @post[:image_path] = "/uploads/" + @uploaded_io.original_filename
+	  @post[:spark_count] = 0
+	  @post[:description] = params[:posts][:text] 
+	  @post[:views] = 0
+	  #@title = params[:posts][:title]
+	  #@description = params[:posts][:text] 
+	  @post.save
+	  redirect_to '/post/' + @post[:id].to_s
+	  #should have redirec to post/id#
 	end
 end

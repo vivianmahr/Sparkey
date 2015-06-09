@@ -12,9 +12,10 @@ Rails.application.routes.draw do
 
   # static_pages_controller
   get '/roulette' => 'static_pages#roulette'
-  get '/submit' => 'static_pages#submit'
+  #get '/submit' => 'static_pages#submit'
   get '/about' => 'static_pages#about'
-
+  get '/submit' => 'posts#new'
+ 
   # posts_controller
   get '/browse' => 'posts#browse'
 

@@ -1,12 +1,9 @@
 
-<h1>you've come to the right place</h1>
-<%= @vibes_string_list %>
-
 <% provide(:title, "GET THE TITLE OF THE IMAGE") %>
 <% provide(:selected, []) %>
 <% content_for :head do %>
-	<%= javascript_include_tag "search.js" %>
-	<%= javascript_include_tag "generate_word_cloud" %>
+    <%= javascript_include_tag "search.js" %>
+    <%= javascript_include_tag "generate_word_cloud" %>
 <% end %>
 
 <style>
@@ -24,13 +21,13 @@
         border-top-right-radius: 0;
     }
     #cloud {
-    	margin-bottom: 2rem;
-    	height: 15rem;
-    	width: 35rem;
+        margin-bottom: 2rem;
+        height: 15rem;
+        width: 35rem;
     }
 </style>
 <script>
-	var words = [
+    var words = [
       {text: "Lorem", weight: 15},
       {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
       {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
@@ -38,6 +35,7 @@
       {text: "Amet", weight: 5}
     ]
 </script>
+<%= @post_vibes %>
 <div class="container">
     <div class="clearer">&nbsp;</div>
     <div class="row">
