@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   get '/about' => 'static_pages#about'
 
   # posts_controller
-  get '/post' => 'posts#post'
   get '/browse' => 'posts#browse'
 
   # users_controller

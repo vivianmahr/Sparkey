@@ -1,1 +1,20 @@
-<%= @id %>
+<div class="container">
+    <div class="clearer">&nbsp;</div>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="form-container">
+                <h3>
+                    Vibes
+                </h3>
+              
+                <%= form_tag({controller: "posts", action: "show"}, method: "get") do %>
+                    <%= text_area_tag(:vibes, "", size: "24x6", :placeholder => "Enter vibes...") %>
+                    <%= submit_tag("Go!") %>
+                <% end %>
+            </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+    <div class="clearer">&nbsp;</div>
+</div>
