@@ -395,7 +395,8 @@ input[type=file]:hover  {
 .col-md-5 .tab {
     float: left;
     color: #000000;
-    width: 50%;
+    /*width: 50%;*/
+    width: 100%;
     text-align: center;
     border: 3px solid #4F2601;
     background: #A3612E;

@@ -49,6 +49,7 @@ class PostsController < ApplicationController
 	  @post[:spark_count] = 0
 	  @post[:description] = params[:posts][:text] 
 	  @post[:views] = 0
+	  @post[:post_type] = params[:posts][:title]
 	  #@title = params[:posts][:title]
 	  #@description = params[:posts][:text] 
 	  @post.save
