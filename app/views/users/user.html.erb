@@ -6,15 +6,13 @@
 <% end %>
 
 <script>
-	var words = [
-      {text: "Lorem", weight: 15},
-      {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
-      {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
-      {text: "Sit", weight: 7},
-      {text: "Amet", weight: 5}
+    var words = [
+        <% @vibes_frequency_hash.each do |key, array| %>
+            <% word = key.dup %>
+            {text: "<%= word.rstrip.lstrip %>", weight: "<%= array %>"},
+        <% end %>
     ]
 </script>
-
 <div class="container">
     <div id="profile">
 		<div id="leftpage" class="page">
@@ -25,7 +23,7 @@
 				<p id="status"><%= @user.about %></p>
 		<% if current_user[:id] == @user[:id] %>
 			<%= form_for :user, url: user_update_path do |f| %>
-				<p>
+				<p id="profilePic">
 					<%= f.file_field :picture %>
 				</p>
 				<p>

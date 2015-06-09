@@ -67,7 +67,7 @@
                     <div id="cloud">
                     </div>
                     <%= form_tag({controller: "posts", action: "show"}, method: "get") do %>
-                        <%= text_area_tag(:vibes, "", size: "24x6", :placeholder => "Enter vibes...", :class => "long") %>
+                        <%= text_area_tag(:vibes, "", size: "24x6", :placeholder => "Enter vibes seperated by commas...", :class => "long") %>
                         <div class="clearer">&nbsp;</div>
                         <%= submit_tag("Submit!") %>
                     <% end %>

@@ -4,6 +4,8 @@ class RoulettesController < ApplicationController
 
 		# Creates an array of vibes 
 		vibes_string_list = params[:vibes]
+		vibes_string_list = vibes_string_list.chomp
+		vibes_string_list = vibes_string_list.rstrip.lstrip
 		vibes_string_list = vibes_string_list.gsub(" ", "")
 		vibes_list = vibes_string_list.split(",")
 		
@@ -22,10 +24,10 @@ class RoulettesController < ApplicationController
 		end
 		post = []
 		if(vibes_list.size == 1)
-			post = Post.where(:id => legit_vibes[0])
+			post = Post.where(:id => legit_vibes[0].post_id)
 		elsif(vibes_list.size > 1)
 			legit_vibes.each do |vibe|
-				post += Post.where(:id => vibe)
+				post += Post.where(:id => vibe.post_id)
 			end
 		else		
 			post = Post.order(views: :asc, created_at: :asc).limit(num_posts)
@@ -37,9 +39,9 @@ class RoulettesController < ApplicationController
 		end
 
 		@final_results_list = results_list
+		@roulette = true
 
-
-
+		render :template => 'posts/browse'
 		
 	end
 end

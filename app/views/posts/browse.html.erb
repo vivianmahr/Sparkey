@@ -1,5 +1,11 @@
-<% provide(:title, "Browse") %>
-<% provide(:selected, ["browse"]) %>
+<% if @roulette %>
+    <% provide(:title, "Roulette") %>
+    <% provide(:selected, ["roulette"]) %>
+<% else %>
+    <% provide(:title, "Browse") %>
+    <% provide(:selected, ["browse"]) %>
+<% end %>
+
 <% content_for :head do %>
 <% end %>
 
@@ -16,7 +22,11 @@
         </div>
         <div class="col-md-6">
             <h3 class="big-text black">
-                Browse
+                <% if @roulette %>
+                    Roulette Results
+                <% else %>
+                    Popular
+                <% end %>
             </h3>
             <% @final_results_list.each do |post, vibes| %>
             <div class="browse-item">

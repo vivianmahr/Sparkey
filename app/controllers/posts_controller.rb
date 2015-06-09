@@ -62,6 +62,7 @@ class PostsController < ApplicationController
 	  @post[:description] = params[:posts][:text] 
 	  @post[:views] = 0
 	  @post[:post_type] = params[:posts][:title]
+	  @post[:user_id] = current_user[:id]
 	  #@title = params[:posts][:title]
 	  #@description = params[:posts][:text] 
 	  @post.save
