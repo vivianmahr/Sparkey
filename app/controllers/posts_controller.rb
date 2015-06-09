@@ -6,8 +6,17 @@ class PostsController < ApplicationController
 	def show
 		@id = params[:id]
 		@post = Post.find(@id)
+		
+		# User inputted vibes
 		vibes_string_list = params[:vibes]
+
+		# Array of vibes that belong to current post
 		@post_vibes = Vibe.where(:post_id => @id)
+
+		@vibes_frequency_hash = Hash.new(0)
+		@post_vibes.each {|vibe| @vibes_frequency_hash[vibe.vibe] += 1}
+
+
 		if !vibes_string_list.nil?
 			# Make an array of vibes
 			vibes_string_list = vibes_string_list.gsub(" ", "")
@@ -19,9 +28,10 @@ class PostsController < ApplicationController
 				new_vibe.post_id = @id
 				new_vibe.save
 			end
-			#redirect_to @post
+			redirect_to @post
+		else
+			render :template => 'posts/post'
 		end
-		render :template => 'posts/post'
 	end
 
 
