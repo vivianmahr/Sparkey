@@ -19,6 +19,8 @@ class PostsController < ApplicationController
 
 		if !vibes_string_list.nil?
 			# Make an array of vibes
+			vibes_string_list.chomp
+			vibes_string_list.gsub(/\t/, '')
 			vibes_string_list = vibes_string_list.gsub(" ", "")
 			vibes_list = vibes_string_list.split(",")
 			# Associate each vibe to current post

@@ -29,7 +29,8 @@
 <script>
     var words = [
         <% @vibes_frequency_hash.each do |key, array| %>
-            {text: "<%= key %>", weight: "<%= array %>"},
+            <% word = key.dup %>
+            {text: "<%= word.rstrip.lstrip %>", weight: "<%= array %>"},
         <% end %>
     ]
 </script>
